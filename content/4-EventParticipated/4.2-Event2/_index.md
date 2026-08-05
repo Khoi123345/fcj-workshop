@@ -1,7 +1,7 @@
 ---
 title: "FCAJ Community Day - June 2026"
 date: 2026-06-27
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
@@ -39,7 +39,7 @@ pre: " <b> 4.2. </b> "
 - **Multi-Agent Architecture:** Explained the selection of a Multi-Agent architecture (multiple specialized AI Agents) over a Single Agent model to optimize context processing costs, enforce Role-Based Access Control (RBAC), and manage operations across complex environments without hallucination.
 
 #### 2. Voice AI Agent & Real-world Applications (Hieu Nghi, Kiet & Trung Do)
-- **Voice AI Architectures:** Introduced two main architectures for voice systems: direct Speech-to-Speech and the hybrid 3-step pipeline (Speech-to-Text $\rightarrow$ LLM processing $\rightarrow$ Text-to-Speech).
+- **Voice AI Architectures:** Introduced two main architectures for voice systems: direct Speech-to-Speech and the hybrid 3-step pipeline (Speech-to-Text → LLM processing → Text-to-Speech).
 - **Live Demo:** Demonstrating an English-speaking Voice Agent built on AWS Bedrock integrated with a Knowledge Base to retrieve product details about Apple MacBooks.
 - **Vietnamese Voice AI for Enterprise:** Vietnamese is a low-resource language, which makes it challenging. R AI implements the 3-step pipeline for major banks (VPBank, VIB) to control response safety in real-time and execute tool calls such as freezing a card.
 - **Advanced Features for Vietnamese:**
@@ -86,7 +86,7 @@ pre: " <b> 4.2. </b> "
 - **Agent Spaces & Tags:** Organizing permissions via tags and dedicated agent spaces simplifies security boundaries and access controls for AI agents.
 
 #### Technical Architecture
-- **Multi-Stage Voice Pipeline:** Processing low-resource languages like Vietnamese is best done through a hybrid STT $\rightarrow$ LLM $\rightarrow$ TTS pipeline optimized with streaming audio and regional data.
+- **Multi-Stage Voice Pipeline:** Processing low-resource languages like Vietnamese is best done through a hybrid STT → LLM → TTS pipeline optimized with streaming audio and regional data.
 - **AI-Driven Operations:** Integrating monitoring tools with DevOps AI Agents accelerates troubleshooting and drastically cuts down MTTR by automatically generating diagnostic insights and recovery commands.
 - **Enterprise Connectors:** Amazon Q Business Connectors allow companies to easily index and query fragmented corporate files under strict access permissions.
 

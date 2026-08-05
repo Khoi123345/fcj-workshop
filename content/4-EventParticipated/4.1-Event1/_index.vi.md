@@ -29,7 +29,7 @@ pre: " <b> 4.1. </b> "
 ### Nội Dung Nổi Bật
 
 #### 1. Thiết kế dịch vụ rút gọn liên kết có thể mở rộng trên AWS (Kiên & Thọ)
-- **Đặt vấn đề:** Dịch vụ rút gọn liên kết (URL Shortener) chuyển đổi một URL dài phức tạp thành mã ngắn. Mô hình cơ bản ban đầu (User $\rightarrow$ Frontend $\rightarrow$ Backend $\rightarrow$ Database) dễ triển khai và chi phí rẻ, nhưng dễ gặp lỗi bảo mật, độ trễ khi đọc cao (Read Latency), có điểm lỗi đơn lẻ (SPOF), và rất khó để mở rộng quy mô khi lưu lượng truy cập tăng vọt.
+- **Đặt vấn đề:** Dịch vụ rút gọn liên kết (URL Shortener) chuyển đổi một URL dài phức tạp thành mã ngắn. Mô hình cơ bản ban đầu (User → Frontend → Backend → Database) dễ triển khai và chi phí rẻ, nhưng dễ gặp lỗi bảo mật, độ trễ khi đọc cao (Read Latency), có điểm lỗi đơn lẻ (SPOF), và rất khó để mở rộng quy mô khi lưu lượng truy cập tăng vọt.
 - **Kiến trúc đề xuất:**
   - **Bảo mật & Điều hướng biên:** Quản lý bởi **Amazon Route 53** (DNS), **Amazon CloudFront** (CDN) để phân phối và caching nhanh, kết hợp với **AWS WAF** (Tường lửa ứng dụng web) để lọc lưu lượng xấu. Việc quản lý khóa bảo mật, phân quyền và chứng chỉ sử dụng **AWS Secrets Manager**, **AWS KMS**, **AWS IAM** và **AWS Certificate Manager**.
   - **Lớp Frontend:** Quản lý và deploy tự động qua **AWS Amplify**.
@@ -62,7 +62,7 @@ pre: " <b> 4.1. </b> "
   - *1975 - 1986:* Giai đoạn bao vây cô lập kinh tế, phân phối hàng hóa thủ công.
   - *1986 - 1995:* Đổi mới kinh tế và bình thường hóa ngoại giao mở đường cho logistics phát triển. Ngoại giao là "logistics" đi đầu.
   - *1997:* Việt Nam chính thức kết nối Internet toàn cầu (19/11/1997), khai thông dòng chảy thông tin số.
-- **Kỷ nguyên FDI & Công xưởng số:** Chuyển dịch kép qua hai hiệu ứng domino: Chuỗi vật lý (FDI $\rightarrow$ Sản xuất $\rightarrow$ Logistics) và Chuỗi số (4G $\rightarrow$ Điện thoại thông minh $\rightarrow$ Khởi nghiệp $\rightarrow$ Đám mây).
+- **Kỷ nguyên FDI & Công xưởng số:** Chuyển dịch kép qua hai hiệu ứng domino: Chuỗi vật lý (FDI → Sản xuất → Logistics) và Chuỗi số (4G → Điện thoại thông minh → Khởi nghiệp → Đám mây).
 - **Nâng cấp tiêu chuẩn cuộc chơi:** Chuyển từ "làm được" sang "làm đúng chuẩn quốc tế":
   - *Chuỗi cung ứng vật lý:* Tuân thủ **GMP**, **GSP**, **GDP** để đảm bảo an toàn hàng hóa.
   - *Chuỗi cung ứng số:* Tuân thủ **ISO 27001**, **SOC 2**, **GDPR** để bảo vệ dữ liệu và chủ quyền số quốc gia.
@@ -81,7 +81,7 @@ pre: " <b> 4.1. </b> "
 - **Bài học xương máu:** Copy lệnh không có nghĩa là bạn hiểu nó; tìm đúng người chịu trách nhiệm cho vấn đề; luôn hỏi "Tại sao" trước khi hỏi "Làm như thế nào"; giao tiếp là chìa khóa; và tránh biến mình thành anh hùng đơn độc gánh team. Tư duy hệ thống, tự động hóa tác vụ lặp đi lặp lại và sử dụng AI thông minh mà "không tắt não".
 
 ##### 5. Lộ trình phát triển từ sinh viên đến AWS Partner (Hiếu Nghị)
-- **Lộ trình 8 bước sự nghiệp:** Student Curiosity $\rightarrow$ First Cloud Journey $\rightarrow$ Workshop & Community $\rightarrow$ Hands-on Labs $\rightarrow$ School Projects $\rightarrow$ Portfolio $\rightarrow$ AWS Partner $\rightarrow$ Share Back.
+- **Lộ trình 8 bước sự nghiệp:** Student Curiosity → First Cloud Journey → Workshop & Community → Hands-on Labs → School Projects → Portfolio → AWS Partner → Share Back.
 - **Các dấu mốc phát triển:**
   - *First Cloud AI Journey Program:* Hệ thống LMS học tập bài bản các dịch vụ AWS cốt lõi (VPC, IAM, EC2, storage, databases, monitoring).
   - *AWS Student Builder Group:* Dẫn dắt câu lạc bộ sinh viên, tổ chức training trực tuyến (như workshop Amazon Bedrock AI) và nhận Badge/AWS Credits tài tài trợ.

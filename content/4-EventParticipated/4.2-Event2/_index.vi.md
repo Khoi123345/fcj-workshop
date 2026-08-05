@@ -1,7 +1,7 @@
 ---
 title: "FCAJ Community Day - June 2026"
 date: 2026-06-27
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
@@ -39,9 +39,9 @@ pre: " <b> 4.2. </b> "
 - **Kiến trúc Multi-Agent:** Giải thích lý do chọn mô hình Multi-Agent (nhiều AI Agent chuyên biệt) thay vì Single Agent nhằm tối ưu hóa chi phí xử lý văn cảnh (Context), quản lý quyền truy cập theo vai trò (RBAC) và vận hành trên nhiều môi trường phức tạp cùng lúc mà không lo bị ảo giác (Hallucination).
 
 #### 2. Giọng nói của AI (Voice AI Agent) & Ứng dụng thực tế (anh Hiếu Nghị, anh Kiệt & anh Trung Đỗ)
-- **Tổng quan về Voice AI:** Giới thiệu về hai dạng kiến trúc hệ thống Voice (Speech-to-Speech trực tiếp và mô hình kết hợp 3 bước: Speech-to-Text $\rightarrow$ LLM xử lý $\rightarrow$ Text-to-Speech).
+- **Tổng quan về Voice AI:** Giới thiệu về hai dạng kiến trúc hệ thống Voice (Speech-to-Speech trực tiếp và mô hình kết hợp 3 bước: Speech-to-Text → LLM xử lý → Text-to-Speech).
 - **Demo thực tế:** Thực hiện Live Demo một Voice Agent nói tiếng Anh được build trên hạ tầng AWS Bedrock, tích hợp Knowledge Base để trả lời thông tin về sản phẩm MacBook của Apple.
-- **Bài toán Voice AI cho tiếng Việt (Enterprise):** Tiếng Việt là ngôn ngữ ít tài nguyên (low-resource). R AI áp dụng kiến trúc 3 bước (STT $\rightarrow$ LLM $\rightarrow$ TTS) cho các ngân hàng như VPBank, VIB để kiểm soát nội dung trả lời real-time và thực hiện cuộc gọi công cụ (Tool calling) như khóa thẻ.
+- **Bài toán Voice AI cho tiếng Việt (Enterprise):** Tiếng Việt là ngôn ngữ ít tài nguyên (low-resource). R AI áp dụng kiến trúc 3 bước (STT → LLM → TTS) cho các ngân hàng như VPBank, VIB để kiểm soát nội dung trả lời real-time và thực hiện cuộc gọi công cụ (Tool calling) như khóa thẻ.
 - **Các tính năng nâng cao cho tiếng Việt:**
   - **Streaming:** Xử lý luồng âm thanh dạng Stream để giảm latency.
   - **Nhận diện giới tính:** Tự động nhận diện giới tính để xưng hô anh/chị chính xác.

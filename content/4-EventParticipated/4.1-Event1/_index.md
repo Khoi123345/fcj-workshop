@@ -29,7 +29,7 @@ pre: " <b> 4.1. </b> "
 ### Key Highlights
 
 #### 1. Designing a Scalable URL Shortener on AWS (Kien & Tho)
-- **Problem Statement:** A standard URL shortener translates long URLs into short codes. A simple model (User $\rightarrow$ Frontend $\rightarrow$ Backend $\rightarrow$ Database) is cheap and easy to build but suffers from high read latency, single points of failure (SPOF), and is highly difficult to scale when traffic surges.
+- **Problem Statement:** A standard URL shortener translates long URLs into short codes. A simple model (User → Frontend → Backend → Database) is cheap and easy to build but suffers from high read latency, single points of failure (SPOF), and is highly difficult to scale when traffic surges.
 - **Cloud Architecture Blueprint:**
   - **Edge Security & Routing:** Managed via **Amazon Route 53** (DNS), **Amazon CloudFront** (CDN) for caching, and **AWS WAF** (Web Application Firewall) to filter malicious traffic. Security is reinforced using **AWS Secrets Manager**, **AWS KMS**, **AWS IAM**, and **AWS Certificate Manager**.
   - **Frontend:** Deployed and managed seamlessly through **AWS Amplify**.
@@ -62,7 +62,7 @@ pre: " <b> 4.1. </b> "
   - *1975 - 1986:* Economic isolation and rationing. Logistics was manual and limited.
   - *1986 - 1995:* Doi Moi reforms and foreign diplomacy opened trade routes. Diplomacy acted as the nation's first "logistics" mechanism.
   - *1997:* Official global Internet connection on November 19, 1997, opening digital information flows.
-- **FDI & Digital Factory Wave:** Driven by two domino effects: Physical (WTO/FTAs $\rightarrow$ FDI $\rightarrow$ Production $\rightarrow$ Logistics) and Digital (4G/Broadband $\rightarrow$ Smartphones $\rightarrow$ Startups $\rightarrow$ Cloud Adoption).
+- **FDI & Digital Factory Wave:** Driven by two domino effects: Physical (WTO/FTAs → FDI → Production → Logistics) and Digital (4G/Broadband → Smartphones → Startups → Cloud Adoption).
 - **Compliance & Standards:** Moving from "getting things done" to "doing things to global standards":
   - *Physical Supply Chain:* Adhering to **GMP**, **GSP**, and **GDP** to ensure safety and quality.
   - *Digital Supply Chain (Tech/Cloud):* Complying with **ISO 27001**, **SOC 2**, and **GDPR** to secure digital assets and national data sovereignty.
@@ -81,7 +81,7 @@ pre: " <b> 4.1. </b> "
 - **Career Advice:** Do not copy-paste commands blindly; identify the real owner of the problem; ask "Why" before "How"; communication is key; and avoid trying to be a team-carrying hero. Maintain system-level thinking, automate boring tasks, and use AI (ChatGPT) without switching off your brain.
 
 #### 5. Journey from First Cloud Program to AWS Partner (Hieu Nghi)
-- **8-Step Career Roadmap:** Student Curiosity $\rightarrow$ First Cloud Journey $\rightarrow$ Workshop & Community $\rightarrow$ Hands-on Labs $\rightarrow$ School Projects $\rightarrow$ Portfolio $\rightarrow$ AWS Partner $\rightarrow$ Share Back.
+- **8-Step Career Roadmap:** Student Curiosity → First Cloud Journey → Workshop & Community → Hands-on Labs → School Projects → Portfolio → AWS Partner → Share Back.
 - **Milestones & Programs:**
   - *First Cloud AI Journey Program:* Virtual LMS platform teaching core AWS services (budgets, IAM, VPC, EC2, storage, databases, monitoring).
   - *AWS Student Builder Group:* Leadership in student tech clubs, running technical workshops (e.g., building voice agents with Amazon Bedrock), and earning badges/credits.

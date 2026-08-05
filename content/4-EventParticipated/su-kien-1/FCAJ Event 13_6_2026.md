@@ -13,7 +13,7 @@ FCAJ Event 13/6/2026
 ## **2\. Đặt vấn đề & Luồng xử lý cơ bản (Simple Flow)**
 
 * **Bản chất của URL Shortener:** Chuyển đổi một đường dẫn dài phức tạp thành một liên kết ngắn gọn (Ví dụ từ liên kết mua sách Amazon dài thành mã ngắn dạng a.co/d/...).  
-* **Mô hình cơ bản ban đầu:** Người dùng $\\rightarrow$ Frontend $\\rightarrow$ Backend $\\rightarrow$ Database (Ghi nhận mã ngắn và URL dài vào cơ sở dữ liệu).  
+* **Mô hình cơ bản ban đầu:** Người dùng → Frontend → Backend → Database (Ghi nhận mã ngắn và URL dài vào cơ sở dữ liệu).  
 * **Đánh giá mô hình cơ bản:**  
   * *Ưu điểm:* Dễ triển khai, chi phí rẻ.  
   * *Nhược điểm:* Dễ bị tổn thương (bảo mật), độ trễ khi đọc cao (Read Latency), có điểm lỗi đơn lẻ (Single Point of Failure), và rất khó để mở rộng quy mô (Hard to scale) khi lượng truy cập lớn.
@@ -140,8 +140,8 @@ Sự phát triển kinh tế và chuỗi cung ứng Việt Nam trải qua 3 cộ
 
 Sự chuyển dịch kép thông qua hai chuỗi hiệu ứng Domino:
 
-* **Chuỗi Domino vật lý (Production & Logistics):** WTO/FTA $\\rightarrow$ Thu hút FDI $\\rightarrow$ Thúc đẩy Sản xuất (Production) $\\rightarrow$ Phát triển Logistics.  
-* **Chuỗi Domino kỹ thuật số (Digital Factory):** Mạng 4G/Broadband $\\rightarrow$ Bùng nổ Smartphone $\\rightarrow$ Làn sóng Startups $\\rightarrow$ Ứng dụng Điện toán đám mây (Cloud).
+* **Chuỗi Domino vật lý (Production & Logistics):** WTO/FTA → Thu hút FDI → Thúc đẩy Sản xuất (Production) → Phát triển Logistics.  
+* **Chuỗi Domino kỹ thuật số (Digital Factory):** Mạng 4G/Broadband → Bùng nổ Smartphone → Làn sóng Startups → Ứng dụng Điện toán đám mây (Cloud).
 
 ### **3\. Nâng cấp cuộc chơi: Từ "Làm được" sang "Làm đúng chuẩn"**
 
@@ -185,12 +185,12 @@ Công việc của một DevOps không cố định mà **phụ thuộc rất l�
 
 Thực tế công việc hàng ngày của DevOps là giải quyết yêu cầu từ mọi phía:
 
-* *Developer (Dev):* "Code chạy ở local nhưng tèo trên staging" $\\rightarrow$ DevOps phải hỗ trợ debug và troubleshoot.  
-* *Tester/QA:* "Môi trường test sập rồi" $\\rightarrow$ DevOps phải khôi phục môi trường và cấp quyền.  
-* *Client/User:* "Sao hệ thống chậm thế?" $\\rightarrow$ DevOps phải trực chiến (On-call rotation), xử lý sự cố (Incident handling).  
-* *Project Manager:* "Hôm nay release được không?" $\\rightarrow$ DevOps phải quản lý quy trình, làm rõ quyền sở hữu (Ownership).  
-* *Security Team:* "Package này dính lỗ hổng" $\\rightarrow$ DevOps phải rà soát, vá lỗi bảo mật.  
-* *Finance:* "Sao hóa đơn Cloud tháng này cao thế?" $\\rightarrow$ DevOps phải đi điều tra và tối ưu chi phí tài nguyên.
+* *Developer (Dev):* "Code chạy ở local nhưng tèo trên staging" → DevOps phải hỗ trợ debug và troubleshoot.  
+* *Tester/QA:* "Môi trường test sập rồi" → DevOps phải khôi phục môi trường và cấp quyền.  
+* *Client/User:* "Sao hệ thống chậm thế?" → DevOps phải trực chiến (On-call rotation), xử lý sự cố (Incident handling).  
+* *Project Manager:* "Hôm nay release được không?" → DevOps phải quản lý quy trình, làm rõ quyền sở hữu (Ownership).  
+* *Security Team:* "Package này dính lỗ hổng" → DevOps phải rà soát, vá lỗi bảo mật.  
+* *Finance:* "Sao hóa đơn Cloud tháng này cao thế?" → DevOps phải đi điều tra và tối ưu chi phí tài nguyên.
 
 ## **4\. Hành trang cho người mới (What should you learn first?)**
 
@@ -199,7 +199,7 @@ Với hệ sinh thái công cụ (DevOps Tool Landscape) khổng lồ trải dà
 * **Nền tảng:** Hệ điều hành Linux, Kiến thức mạng cơ bản (Networking), Ngôn ngữ lập trình (Python, Golang).  
 * **Công cụ cốt lõi:** Git & CI/CD, Containers (Docker).  
 * **Kiến thức vận hành:** Hiểu cách các ứng dụng chạy (Build, test, deploy, logs, cấu hình, biến môi trường).  
-* **Thực hành:** Xây dựng các project nhỏ $\\rightarrow$ Deploy một ứng dụng đơn giản $\\rightarrow$ Tự động hóa nó $\\rightarrow$ Giám sát nó $\\rightarrow$ Tự làm hỏng nó rồi tự sửa (Break it, fix it).
+* **Thực hành:** Xây dựng các project nhỏ → Deploy một ứng dụng đơn giản → Tự động hóa nó → Giám sát nó → Tự làm hỏng nó rồi tự sửa (Break it, fix it).
 
 ## **5\. Những bài học đắt giá (Things I learned the hard way)**
 
