@@ -1,57 +1,30 @@
 ---
 title: "Week 4 Worklog"
-date: 2024-01-01
+date: 2026-07-13
 weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn Serverless backend programming with .NET 8 on AWS Lambda.
+* Study Amazon Bedrock Runtime API and Claude LLM prompt engineering.
+* Write a prototype .NET 8 Lambda function that invokes Amazon Bedrock API.
+* Test generating dynamic story text and branching choices for RPG adventures.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Study AWS Lambda architecture for C# .NET 8 runtime <br> - Learn `Amazon.Lambda.Core` & `Amazon.Lambda.APIGatewayEvents` packages | 07/13/2026 | 07/13/2026 | AWS Lambda C# Docs |
+| Tue | - Research Amazon Bedrock Service and Claude LLM foundation models <br> - Learn IAM permissions required for `bedrock:InvokeModel` | 07/14/2026 | 07/14/2026 | Amazon Bedrock Developer Guide |
+| Wed | - Install `AWSSDK.BedrockRuntime` NuGet package in .NET 8 backend <br> - Design prompt templates for generating RPG dungeon scenarios and 3 player choices | 07/15/2026 | 07/15/2026 | AWS SDK for .NET Docs |
+| Thu | - Implement AI Story Generator service calling Bedrock Runtime API <br> - Write JSON parser to map AI output into `StoryNodeResponse` DTO | 07/16/2026 | 07/16/2026 | Prompt Engineering Best Practices |
+| Fri | - Test local execution of .NET 8 Lambda handler invoking Bedrock <br> - Verify generated story nodes and choices formatting consistency | 07/17/2026 | 07/17/2026 | AWS Mock Testing |
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Understood .NET 8 Serverless architecture on AWS Lambda.
+* Successfully integrated Amazon Bedrock Runtime API into C# backend.
+* Created working AI story prompt templates generating structured RPG adventure choices.

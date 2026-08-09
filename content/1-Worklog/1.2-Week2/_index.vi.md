@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 2"
-date: 2024-01-01
+title: "Nhật ký công việc Tuần 2"
+date: 2026-06-29
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 2:
 
-### Mục tiêu tuần 2:
+* Tìm hiểu thiết kế Class Library nâng cao trong C# và phân tách dự án trong Monorepo.
+* Thiết kế và xây dựng các lớp DTO (Data Transfer Object) và Domain Model trong `GameShared`.
+* Định nghĩa cấu trúc dữ liệu cho Nhân vật, Trận đấu (Battle), Túi đồ (Inventory) và Cốt truyện AI.
+* Kiểm tra khả năng biên dịch và dùng chung thư viện giữa môi trường .NET 8 Backend và Unity Engine.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Nhiệm vụ thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ 2 | - Nghiên cứu chuẩn .NET Standard 2.1 để đảm bảo tương thích với Unity C# <br> - Cấu hình file `GameShared.csproj` cho dự án thư viện dùng chung | 29/06/2026 | 29/06/2026 | Microsoft .NET Standard Docs |
+| Thứ 3 | - Thiết kế DTOs cho Nhân vật & Chỉ số: `PlayerStats`, `CharacterProfile`, `LevelProgress` <br> - Thêm các attribute hỗ trợ serialize/deserialize JSON | 30/06/2026 | 30/06/2026 | System.Text.Json Docs |
+| Thứ 4 | - Thiết kế DTOs cho Trận đấu (Battle System): `BattleRequest`, `BattleResult`, `TurnAction`, `BossStats` <br> - Khởi tạo các Enum về loại sát thương và hành động chiến đấu | 01/07/2026 | 01/07/2026 | Game Architecture Patterns |
+| Thứ 5 | - Thiết kế DTOs cho Túi đồ (Inventory): `ItemModel`, `EquipRequest`, `InventoryState` <br> - Thiết kế DTOs cho AI Cốt truyện: `StoryPromptRequest`, `StoryNodeResponse`, `ChoiceOption` | 02/07/2026 | 02/07/2026 | Clean Code C# |
+| Thứ 6 | - Build xuất file `GameShared.dll` và import thử nghiệm vào dự án Unity <br> - Kiểm tra đọc/ghi dữ liệu JSON thử nghiệm để đảm bảo không bị lỗi dữ liệu | 03/07/2026 | 03/07/2026 | Unity C# Scripting |
 
+### Kết quả đạt me Tuần 2:
 
-### Kết quả đạt được tuần 2:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Xây dựng xong thư viện `GameShared` đảm bảo tính đồng bộ dữ liệu giữa Frontend và Backend.
+* Tránh việc viết lặp lại code (DRY - Don't Repeat Yourself) cho các lớp dữ liệu.
+* Đảm bảo `GameShared.dll` hoạt động trơn tru cả trong Unity C# và dự án .NET 8 Lambda.

@@ -1,59 +1,31 @@
 ---
-title: "Worklog Tuần 1"
-date: 2024-01-01
+title: "Nhật ký công việc Tuần 1"
+date: 2026-06-22
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 1:
 
-### Mục tiêu tuần 1:
+* Làm quen và kết nối với các thành viên, anh chị mentor trong chương trình First Cloud AI Journey.
+* Nắm rõ quy định thực tập và thiết lập môi trường làm việc trên máy tính cá nhân.
+* Tìm hiểu kiến thức điện toán đám mây AWS cơ bản (Compute, Storage, Networking, IAM) và công cụ AWS CLI.
+* Khởi tạo cấu trúc dự án Monorepo C# cho game AI Dungeon RPG Adventure.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Nhiệm vụ thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ 2 | - Tham gia buổi onboarding & gặp gỡ các thành viên trong nhóm <br> - Đọc và nắm rõ nội quy thực tập và quy trình báo cáo | 22/06/2026 | 22/06/2026 | Sổ tay thực tập |
+| Thứ 3 | - Tìm hiểu các nhóm dịch vụ AWS cơ bản: <br>&emsp; + Compute (EC2) <br>&emsp; + Storage (S3) <br>&emsp; + Networking (VPC) <br>&emsp; + IAM & Security | 23/06/2026 | 23/06/2026 | <https://aws.amazon.com/getting-started/> |
+| Thứ 4 | - Đăng ký tài khoản AWS Free Tier <br> - Cài đặt và cấu hình AWS CLI trên máy tính <br> - Thực hành các câu lệnh AWS CLI cơ bản (`aws configure`, `aws sts get-caller-identity`) | 24/06/2026 | 24/06/2026 | <https://docs.aws.amazon.com/cli/> |
+| Thứ 5 | - Tìm hiểu mô hình tổ chức dự án Monorepo C# <br> - Tạo cấu trúc thư mục dự án (`Assets/Unity`, `backend`, `shared/GameShared`) | 25/06/2026 | 25/06/2026 | C# Monorepo Best Practices |
+| Thứ 6 | - Tạo dự án thư viện `GameShared` (.NET Standard 2.1) <br> - Thực hành build và tham chiếu `GameShared.dll` sang các dự án thành phần | 26/06/2026 | 26/06/2026 | .NET Standard Docs |
 
+### Kết quả đạt được Tuần 1:
 
-### Kết quả đạt được tuần 1:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành hòa nhập với môi trường thực tập và trao đổi định hướng dự án với mentor.
+* Đã cài đặt và cấu hình đầy đủ các công cụ: Git, AWS CLI, .NET 8 SDK và Unity Engine.
+* Nắm chắc tổng quan các dịch vụ cơ bản của AWS và sử dụng thành thạo AWS CLI để kiểm tra tài khoản.
+* Khởi tạo thành công khung dự án Monorepo C# và thư viện dùng chung `GameShared`.

@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 4"
-date: 2024-01-01
+title: "Nhật ký công việc Tuần 4"
+date: 2026-07-13
 weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 4:
 
-### Mục tiêu tuần 4:
+* Tìm hiểu lập trình Backend Serverless với .NET 8 trên dịch vụ AWS Lambda.
+* Nghiên cứu dịch vụ Amazon Bedrock Runtime API và kỹ thuật viết Prompt cho mô hình Claude LLM.
+* Viết thử nghiệm hàm .NET 8 Lambda thực hiện gọi API Amazon Bedrock sinh nội dung tự động.
+* Đánh giá chất lượng sinh câu chuyện phiêu lưu và các lựa chọn rẽ nhánh cho game RPG.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Nhiệm vụ thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ 2 | - Tìm hiểu kiến trúc AWS Lambda cho runtime C# .NET 8 <br> - Đọc tài liệu `Amazon.Lambda.Core` & `Amazon.Lambda.APIGatewayEvents` | 13/07/2026 | 13/07/2026 | AWS Lambda C# Docs |
+| Thứ 3 | - Nghiên cứu dịch vụ Amazon Bedrock và các mô hình ngôn ngữ lớn Claude LLM <br> - Tìm hiểu quyền IAM `bedrock:InvokeModel` cần thiết để gọi Bedrock | 14/07/2026 | 14/07/2026 | Amazon Bedrock Developer Guide |
+| Thứ 4 | - Cài đặt thư viện `AWSSDK.BedrockRuntime` vào dự án .NET 8 Backend <br> - Thiết kế mẫu Prompt chuẩn để sinh ra ngữ cảnh ngục tối và 3 lựa chọn hành động | 15/07/2026 | 15/07/2026 | AWS SDK for .NET Docs |
+| Thứ 5 | - Lập trình Service gọi Bedrock Runtime API trong C# <br> - Viết bộ parse đọc kết quả JSON từ AI thành đối tượng `StoryNodeResponse` DTO | 16/07/2026 | 16/07/2026 | Prompt Engineering Best Practices |
+| Thứ 6 | - Chạy thử nghiệm hàm Lambda local gọi thành công Bedrock API <br> - Kiểm tra độ chuẩn xác của dữ liệu sinh ra đảm bảo không bị lỗi cấu trúc | 17/07/2026 | 17/07/2026 | AWS Mock Testing |
 
+### Kết quả đạt được Tuần 4:
 
-### Kết quả đạt được tuần 4:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu rõ cách thức hoạt động của Serverless .NET 8 trên AWS Lambda.
+* Kết nối thành công dịch vụ Amazon Bedrock Runtime API từ ứng dụng C#.
+* Tạo được các mẫu Prompt AI chất lượng, sinh ra kịch bản phiêu lưu RPG hấp dẫn kèm lựa chọn cho người chơi.

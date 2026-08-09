@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 3"
-date: 2024-01-01
+title: "Nhật ký công việc Tuần 3"
+date: 2026-07-06
 weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 3:
 
-### Mục tiêu tuần 3:
+* Tìm hiểu mô hình kiến trúc Unity UI Presenter (Tách biệt UI View và Logic xử lý trong Unity).
+* Học cách giao tiếp API bất đồng bộ sử dụng `UnityWebRequest` và cơ chế async/await trong C#.
+* Viết lớp helper `ApiClient` để phục vụ gọi các API RESTful từ client Unity.
+* Xây dựng các UI hỗ trợ như hiệu ứng Loading (Spinner) và bảng thông báo lỗi (Error Modal).
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Nhiệm vụ thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ 2 | - Tìm hiểu giao diện Canvas trong Unity, Anchors, Auto Layout Groups & UI Events <br> - Đọc hiểu mô hình MVP (Model-View-Presenter) ứng dụng trong thiết kế UI Game | 06/07/2026 | 06/07/2026 | Unity UI Documentation |
+| Thứ 3 | - Tìm hiểu lớp `UnityWebRequest` gửi request HTTP GET/POST <br> - Thực hành lập trình bất đồng bộ async/await trong Unity C# | 07/07/2026 | 07/07/2026 | UnityWebRequest Manual |
+| Thứ 4 | - Viết lớp `ApiClient.cs` tái sử dụng cho toàn dự án Unity <br> - Tích hợp parse dữ liệu JSON sử dụng các lớp DTO từ `GameShared.dll` | 08/07/2026 | 08/07/2026 | Async C# in Unity |
+| Thứ 5 | - Thiết kế component UI Loading Spinner hiển thị khi chờ API response <br> - Xây dựng popup thông báo lỗi mạng (Network Error / Timeout popup) | 09/07/2026 | 09/07/2026 | Unity UX Design |
+| Thứ 6 | - Gọi thử nghiệm mock API từ `ApiClient` để kiểm tra luồng gửi và nhận dữ liệu <br> - Re-factor code Presenter đảm bảo không trộn lẫn logic giao diện và gọi mạng | 10/07/2026 | 10/07/2026 | Refactoring UI Code |
 
+### Kết quả đạt được Tuần 3:
 
-### Kết quả đạt được tuần 3:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Làm chủ cách sắp xếp UI chuyên nghiệp trong Unity và áp dụng chuẩn mô hình UI Presenter.
+* Viết thành công lớp `ApiClient` thực hiện gọi API bất đồng bộ mượt mà không làm đơ game.
+* Tích hợp thành công giao diện chờ (Loading Overlay) và thông báo lỗi giúp trải nghiệm người dùng tốt hơn.

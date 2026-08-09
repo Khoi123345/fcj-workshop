@@ -1,58 +1,30 @@
 ---
-title: "Worklog Tuần 6"
-date: 2024-01-01
+title: "Nhật ký công việc Tuần 6"
+date: 2026-07-27
 weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 6:
 
-### Mục tiêu tuần 6:
+* Lập trình logic game trên Backend .NET 8 AWS Lambda để chống gian lận (Anti-Cheat).
+* Phát triển bộ tính toán trận đấu theo lượt (Tính sát thương, Chí mạng, Giảm giáp, Né tránh).
+* Xây dựng hệ thống Tăng cấp (Level Up), công thức tăng chỉ số và cơ chế Xử lý khi Nhân vật tử trận (Death System).
+* Xây dựng logic Backend cho Túi đồ (Thay trang bị, Sử dụng bình máu, tính toán lại chỉ số cộng thêm).
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Nhiệm vụ thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ 2 | - Lập trình `BattleService.cs` trên Backend .NET 8 <br> - Viết thuật toán tính toán sát thương theo lượt (Sát thương vật lý, Phép thuật, Tỷ lệ chí mạng) | 27/07/2026 | 27/07/2026 | Game Combat Math |
+| Thứ 3 | - Phát triển logic lượt đánh cho Boss và sử dụng kỹ năng tự động <br> - Trả về `BattleResult` DTO chứa đầy đủ diễn biến sau mỗi lượt đánh | 28/07/2026 | 28/07/2026 | Boss Turn State Machine |
+| Thứ 4 | - Viết `LevelUpService.cs` (Tính toán kinh nghiệm nhận được & Tăng chỉ số nhân vật) <br> - Viết `DeathSystem.cs` (Cơ chế hồi sinh & hình phạt khi nhân vật hết máu) | 29/07/2026 | 29/07/2026 | RPG Progression Systems |
+| Thứ 5 | - Viết `InventoryService.cs` (Logic mặc/tháo trang bị, tính toán lại tổng chỉ số) <br> - Xử lý logic sử dụng bình HP/MP hồi máu tức thì trên server | 30/07/2026 | 30/07/2026 | Inventory Management Patterns |
+| Thứ 6 | - Tạo các Lambda Handler cho `/battle/action`, `/character/levelup`, `/inventory/equip` <br> - Viết unit test cho các trường hợp đặc biệt (đánh quá máu, nhân vật tử trận) | 31/07/2026 | 02/08/2026 | xUnit for .NET 8 |
 
+### Kết quả đạt được Tuần 6:
 
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Xây dựng hoàn chỉnh bộ logic game Serverless trên .NET 8 AWS Lambda.
+* Đảm bảo tính minh bạch và chống hack tuyệt đối nhờ tính toán toàn bộ logic trận đấu ở Server.
+* Hoàn thành trọn bộ API xử lý Trận đấu, Thăng cấp, Hồi sinh và Quản lý túi đồ.

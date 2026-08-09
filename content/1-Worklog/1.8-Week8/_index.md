@@ -1,57 +1,30 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-01-01
+date: 2026-08-10
 weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Record gameplay demo video and capture screenshots of the AI Dungeon RPG game.
+* Review all 8-week achievements with internship mentor and team members.
+* Complete self-evaluation form and feedback section in the Hugo internship site.
+* Finalize and publish the complete Internship Report on GitHub Pages.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Record full gameplay demo video (Main Menu -> Story Choice -> Battle -> Level Up -> Inventory) <br> - Capture high-quality gameplay screenshots for the report showcase | 08/10/2026 | 08/10/2026 | Project Showcase |
+| Tue | - Review project progress & achievements with mentor <br> - Receive feedback on C# Monorepo code quality, Unity UI layout & .NET 8 Lambda logic | 08/11/2026 | 08/11/2026 | Code Review Guide |
+| Wed | - Complete Section 6: Self-Evaluation (`content/6-Self-evaluation/_index.md`) <br> - Complete Section 7: Feedback & Sharing (`content/7-Feedback/_index.md`) | 08/12/2026 | 08/12/2026 | Hugo Site Content |
+| Thu | - Audit all Markdown files across Worklog, Proposal, Workshop, and Feedback sections <br> - Test Hugo local build with `hugo --minify` to fix any broken formatting or links | 08/13/2026 | 08/13/2026 | Hugo Build Checks |
+| Fri | - Commit final changes to Git repository <br> - Deploy complete Internship Report website to GitHub Pages (`https://khoi123345.github.io/fcj-workshop/`) | 08/14/2026 | 08/15/2026 | GitHub Pages Deploy |
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully finalized the AI Dungeon RPG Adventure Game project demonstration.
+* Completed self-evaluation, project feedback, and full 8-week worklog documentation.
+* Successfully built and published the final Hugo Internship Report website live on GitHub Pages.

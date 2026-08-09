@@ -1,57 +1,30 @@
 ---
 title: "Week 3 Worklog"
-date: 2024-01-01
+date: 2026-07-06
 weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn Unity UI Presenter architectural pattern (MVP / Presenter separation).
+* Study asynchronous API communication using `UnityWebRequest` and `Task`/`UniTask` in C#.
+* Build HTTP client helper class (`ApiClient`) to call REST API endpoints from Unity.
+* Implement error handling, loading spinners, and alert modal UI components in Unity.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Learn Unity UI Canvas layout, Anchors, Layout Groups & UI Event Listeners <br> - Study MVP (Model-View-Presenter) design pattern for Unity | 07/06/2026 | 07/06/2026 | Unity UI Documentation |
+| Tue | - Research `UnityWebRequest` for sending HTTP POST/GET requests <br> - Learn async/await programming model in Unity C# | 07/07/2026 | 07/07/2026 | UnityWebRequest Manual |
+| Wed | - Write reusable `ApiClient.cs` utility class <br> - Implement JSON payload serialization using `GameShared` DTOs | 07/08/2026 | 07/08/2026 | Async C# in Unity |
+| Thu | - Build UI Loading Spinner component to block UI during API waiting <br> - Create Error Popup Modal component for network timeout notifications | 07/09/2026 | 07/09/2026 | Unity UX Design |
+| Fri | - Test mock API calls using `ApiClient` to test HTTP request/response flow <br> - Refactor UI Presenter code to keep View components clean of networking logic | 07/10/2026 | 07/10/2026 | Refactoring UI Code |
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered Unity UI layout design and the UI Presenter architectural pattern.
+* Successfully built an asynchronous `ApiClient` capable of communicating with HTTP REST APIs.
+* Implemented proper user feedback mechanisms (loading overlay & error modals) for smooth UX.

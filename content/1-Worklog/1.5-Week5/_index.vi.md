@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 5"
-date: 2024-01-01
+title: "Nhật ký công việc Tuần 5"
+date: 2026-07-20
 weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 5:
 
-### Mục tiêu tuần 5:
+* Xây dựng trọn bộ các UI Presenter trong Unity Client cho dự án AI Dungeon RPG.
+* Phát triển các màn hình: MainMenu, Tạo nhân vật, Giao diện Cốt truyện, Giao diện Trận đấu và Túi đồ.
+* Tích hợp các giao diện Unity với `ApiClient` để nhận và gửi dữ liệu lên Backend.
+* Xử lý hiển thị dữ liệu động: Thanh Máu (HP), Năng lượng (MP), Thanh Kinh nghiệm (EXP) và danh sách nút lựa chọn.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Nhiệm vụ thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ 2 | - Thiết kế & lập trình `MainMenuPresenter` & `CharacterCreatePresenter` <br> - Kết nối UI tạo nhân vật với backend để lấy chỉ số khởi tạo | 20/07/2026 | 20/07/2026 | Unity UI Canvas Layout |
+| Thứ 3 | - Thiết kế & lập trình `StoryViewPresenter` <br> - Xử lý hiển thị đoạn văn bản AI sinh ra và render động 3 nút lựa chọn hành động | 21/07/2026 | 21/07/2026 | Unity Dynamic UI Instantiation |
+| Thứ 4 | - Thiết kế & lập trình `BattleViewPresenter` <br> - Tạo thanh HP/MP, bộ nút kỹ thuật (Tấn công, Dùng skill, Phòng thủ, Bỏ chạy) & hình ảnh Boss | 22/07/2026 | 22/07/2026 | Unity UI Animation & Health Bars |
+| Thứ 5 | - Thiết kế & lập trình `InventoryViewPresenter` <br> - Dựng lưới hiển thị trang bị (Grid Layout), khung hiển thị thông số vật phẩm & nút sử dụng | 23/07/2026 | 23/07/2026 | Unity Grid Layout Group |
+| Thứ 6 | - Ghép nối tất cả UI Presenter với `ApiClient` <br> - Kiểm tra luồng chuyển màn hình từ Main Menu -> Cốt truyện -> Lựa chọn -> Trận đấu -> Túi đồ | 24/07/2026 | 24/07/2026 | Unity Scene Management |
 
+### Kết quả đạt được Tuần 5:
 
-### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thiện toàn bộ các màn hình giao diện chính của game trong Unity.
+* Hiển thị động thông số nhân vật mượt mà lên thanh HP/MP và ô lưới trang bị.
+* Kết nối thành công toàn bộ giao diện Unity với các API endpoint của Backend.
