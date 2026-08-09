@@ -7,11 +7,11 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Lê Minh Tiến
+&emsp; **Họ và tên:** Hồ Quốc Khôi
 
-&emsp; **Số điện thoại:** 0938243631 
+&emsp; **Số điện thoại:** 0908549030 
 
-&emsp; **Email:** lmt180304@gmail.com
+&emsp; **Email:** hoquockhoi.114@gmail.com
 
 &emsp; **Trường:** Trường Đại học Sài Gòn
 
@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 22/06/2026 đến ngày 15/08/2026
 
-![Ảnh đại diện của bạn](../images/avatar1.png)
+![Ảnh đại diện của bạn](../images/avatar1.jpg)
 
 
 

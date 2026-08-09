@@ -10,11 +10,11 @@ chapter: false
 
 
 ### Student Information:
-&emsp; **Full Name:** Le Minh Tien
+&emsp; **Full Name:** Ho Quoc Khoi
 
-&emsp; **Phone Number:** 0938243631 
+&emsp; **Phone Number:** 0908549030 
 
-&emsp; **Email:** lmt180304@gmail.com
+&emsp; **Email:** hoquockhoi.114@gmail.com
 
 &emsp; **University:** Saigon University
 
@@ -28,7 +28,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 22/06/2026 to 15/08/2026
 
-![Your profile picture](images/avatar1.png)
+![Your profile picture](images/avatar1.jpg)
 
 ### Report Content
 
