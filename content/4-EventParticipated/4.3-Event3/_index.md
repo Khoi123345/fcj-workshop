@@ -6,57 +6,106 @@ chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# Summary Report: "FCAJ - Agentic AI Build Week"
+# Summary Report: "FCAJ - Agentic AI Build Week & Agent Forge"
 
-### The Spirit of the Event
+### Event Objectives
 
-More than just a sharing session, **FCAJ - Agentic AI Build Week** was truly a fiery Community Day dedicated to the warriors emerging from the AABW Hackathon arena. 
+- Understand the paradigm shift from basic LLM prompts to autonomous Agentic AI systems (`Reasoning → Planning → Execution`).
+- Master the 5 production architecture layers of an AI Agent on AWS Cloud: Brain, System Prompt, Knowledge Context, Tools, and Memory/Observability.
+- Explore modern AI protocols (Model Context Protocol - MCP, and Agent-to-Agent - A2A) for seamless tool and inter-agent communication.
+- Deep dive into Amazon Bedrock Agent Core security features, including Firecracker MicroVM isolation, Workload Access Tokens (WAT), and Human-in-the-Loop (HITL) Gateways.
+- Practice hands-on Vibe Coding using Kiro IDE with Steering Rules and deploy AI Agents via `agentcore CLI`.
 
-This was an intersection of bold ideas, where young tech talents dissected challenges, recounted their "race against time" journeys, and showcased breakthrough AI projects. More than just a competition, the event proved that AI is stepping out of the lab to solve the most difficult enterprise problems.
+### Speakers
 
----
-
-### The Stage for Breakthrough Projects
-
-The event got hotter than ever with impressive performances from 5 outstanding teams:
-
-#### 1. Team "One team" - Pioneering F&B Automation
-* **Members:** Anh Duy, Tran Dong, Doan Trung, Minh Viet, Anshul Roy
-* **Project Highlight:** The team turned a seemingly familiar idea into an incredibly seamless solution: **An AI ordering chatbot for a fast-food chain (like KFC)**.
-* **Core Value:** Without forcing users to download an extra app, this bot integrates directly into widely-used messaging platforms like Zalo and WhatsApp. It analyzes natural language, communicates like a real staff member, and completely automates the order-taking workflow, opening a new standard for F&B services.
-
-#### 2. Team "Signal Scout" - Strategic Risk Radar
-* **Members:** Le Tan Luc, Do Hoang Hieu, Trieu Quoc Hao, Nguyen Van Duy Khiem, Nguyen Cong Minh, Nguyen Tran Minh Quan
-* **Project Highlight:** Transforming the *Value Creation & Delivery Canvas* model into a sharp enterprise intelligence platform.
-* **Core Value:** The system collects restructuring signals and connects fragmented data pieces into a clear strategic picture. By combining the power of **AWS, LangFuse, TinyFish, and Apify**, the project helps risk managers detect early fluctuations and make decisions (Maintain, Adapt, or Accelerate) based on undeniable data evidence.
-
-#### 3. Team "Plan V" - The Ultimate Assistant for Cloud Architects
-* **Members:** Pham Tien Thuan Phat, Huynh Hoang Long, Le Minh Nghia, Tran Dai Vi, Nguyen An
-* **Project Highlight:** Created the *Solution Architect Professional AI Native App* – a powerful right-hand tool for any system engineer.
-* **Core Value:** This AI application can "read" project requirements in natural language, automatically drafting standard Hybrid-cloud architectures. Even more amazingly, it can generate editable architecture diagrams on **Draw.io** (with official AWS icons), accurately estimate costs for the `ap-southeast-1` Region, and continuously optimize through in-depth interactive chat sessions.
-
-#### 4. Team "3KA" - The 24-Hour Miracle Shaping Crowd Security
-* **Members:** Huynh An Khuong, Nguyen Quoc Huy, Ngo Quang Khoi, Hoang Le Thanh Duc, Dang Nguyen Phuoc Loc, Dang Truong Hung
-* **Project Highlight:** A smart crowd monitoring and management system coded at "lightning speed" in just 24 hours.
-* **Core Value:** The system acts as a "magic eye" capable of tracking human flow, measuring density, and estimating queuing conditions in real-time. From there, it proactively sends overload warning signals and provides immediate action recommendations for security teams to prevent congestion.
-
-#### 5. Team 5 - Redefining the E-payment Flow
-* **Project Highlight:** The team brought a smart solution to optimize the payment transaction flow.
-* **Core Value:** By integrating AI into the reconciliation and transaction processing workflow, the project aims to eliminate all friction barriers, delivering a payment experience that is not only seamless and smooth but also meets absolute safety standards.
+- **Nghia Nguyen** – Principal Speaker (Covering Enterprise Agentic AI Architecture & L300 Theory)
+- **Hai Anh** – Hands-on Speaker (Leading Live Vibe Coding with Kiro IDE & AgentCore CLI)
+- **AWS Study Group** – Host & Community Organizer
 
 ---
 
-### Experiences & Core Takeaways
+### Key Highlights
 
-Participating in **FCAJ - Agentic AI Build Week** was like a massive boost to my product-making mindset.
+#### 1. Agentic AI Philosophy & The Spectrum of Autonomy (Nghia Nguyen)
+- **Beyond Standard LLMs:** Traditional LLMs act as token predictors. Agentic AI represents a new class of autonomous software that performs an iterative loop: **Reasoning → Planning → Execution**.
+- **Spectrum of Autonomy:** Categorized into a 4-level spectrum:
+  - *Simple Assistant:* Basic Q&A prompt interfaces.
+  - *Deterministic Workflow:* Fixed developer-coded workflows with human oversight.
+  - *Human-in-the-Loop Workflow:* Autonomous agent planning requiring mandatory human approval for critical actions.
+  - *Fully Autonomous Multi-Agent Systems:* Specialized agents autonomously collaborating and handling long-running background tasks.
 
-* **From Code to Product:** The biggest lesson wasn't about who used more complex algorithms, but **how cleverly AI was embedded into reality**. From ordering fried chicken via Zalo to automated architecture drawings, technology only truly shines when it solves real user "pain points".
-* **The Art of Integration:** Deeply understanding how teams pieced together API components (Zalo, Drawio, Apify) into a unified Cloud infrastructure architecture, ensuring scalability while strictly optimizing costs.
-* **The Power of Pressure (Hackathon Spirit):** Seeing how Team 3KA built a complex AI recognition system in 24 hours, I realized that our limits can absolutely be broken when working with high focus and a cohesive team.
+#### 2. Core 5-Layer AI Agent Production Architecture (Nghia Nguyen)
+- **Decoupling Production Agents:** Building resilient production AI Agents requires decoupling five essential components:
+  1. *Brain (LLM Reasoning):* Core cognitive models like Anthropic Claude 3.5 Sonnet, Claude 3 Haiku, or Amazon Nova.
+  2. *System Prompt & Steering Rules:* Defining identity, role boundaries, and strict response formatting.
+  3. *Knowledge Base / Context:* Connecting enterprise data via RAG and Vector Databases (e.g., OpenSearch Serverless).
+  4. *Tools & Action Invocation:* Exposing external capabilities (executing SQL queries, calling REST Webhooks, Gmail API).
+  5. *Memory & Observability:* Maintaining short-term/long-term session context and monitoring telemetry via Amazon CloudWatch.
 
-#### Memorable moments at the event
+#### 3. Next-Generation AI Protocols & Frameworks (Nghia Nguyen)
+- **Model Context Protocol (MCP):** An open standard protocol replacing traditional REST APIs for agent-to-tool communication, making plugin integration seamless across different LLM models.
+- **Agent-to-Agent (A2A) Protocol:** Standardizing inter-agent communication, allowing a Master Agent to delegate specialized sub-tasks to Worker Agents autonomously.
+- **AWS Strands SDK & Factory Pattern:** Utilizing open-source Strands SDK alongside the Factory Design Pattern to instantiate agents cleanly (`Agent = Model + System Prompt + Tools`).
+
+#### 4. Amazon Bedrock Agent Core Infrastructure & Security Topology (Nghia Nguyen)
+- **Firecracker MicroVM Isolation:** Amazon Bedrock Agent Core executes each user session inside a dedicated Firecracker MicroVM, guaranteeing zero cross-tenant data leakage.
+- **5-Step Security Flow with Workload Access Token (WAT):**
+  1. *Inbound Request:* Client submits request with a JWT or AWS Cognito Credential.
+  2. *Token Exchange:* Agent Core exchanges user JWT for a scoped Workload Access Token (WAT).
+  3. *Outbound Delegation:* WAT is converted into tool-specific credentials (OAuth/API Key) stored in an encrypted Token Vault.
+  4. *Execution:* Tools execute without ever exposing the user's primary credentials.
+  5. *Safe Response:* Filtered response is returned securely to the client.
+- **Enterprise Gateway & HITL:** Acts as a middleware proxy. For example, financial refund requests under \$100 are automatically executed by the Agent, whereas requests over \$100 trigger an administrative approval workflow before execution.
+
+#### 5. Practical Vibe Coding Lab with Kiro IDE & agentcore CLI (Hai Anh)
+- **Kiro IDE Steering Rules:** Configured `.kiro/steering.md` rules to instruct the AI assistant inside Kiro IDE to generate C# and Python code following AWS Strands SDK best practices.
+- **3-Command Deployment Workflow:**
+  1. `agentcore init my-first-agent` — Automatically scaffolds project structure (`agent.py`, `config.yaml`, `requirements.txt`).
+  2. `agentcore configure --model anthropic.claude-3-5-sonnet` — Links LLM model and system persona.
+  3. `agentcore deploy --env dev` — Packages and deploys the agent onto Amazon Bedrock Agent Core Firecracker MicroVMs in seconds.
+
+---
+
+### Key Takeaways
+
+#### Design Mindset
+- **Autonomous Agentic Loops:** Transition from static single-turn prompt interactions to autonomous Reasoning → Planning → Execution workflows.
+- **Zero Tenant Data Leakage:** Leverage hardware-isolated Firecracker MicroVMs to run secure user agent sessions in multi-tenant environments.
+- **Human-in-the-Loop Governance:** Enforce administrative approval gates at the Gateway layer for high-risk corporate actions.
+
+#### Technical Architecture
+- **Standardized Agent Protocols:** Adopt Model Context Protocol (MCP) and Agent-to-Agent (A2A) standards to streamline tool integration and multi-agent coordination.
+- **Workload Access Token Security:** Protect user credentials by delegating external tool calls through scoped Workload Access Tokens (WAT).
+- **Decoupled Agent Factories:** Use Factory Design Patterns to bundle Models, System Prompts, and Tools into modular agent instances.
+
+#### Modernization & AI Integration
+- **Vibe Coding Methodology:** Use IDE Steering Rules (`.kiro/steering.md`) to guide AI coding assistants in generating Cloud-native code.
+- **Serverless CLI Deployment:** Streamline agent infrastructure management using rapid CLI toolchains (`agentcore CLI`).
+
+---
+
+### Applying to Work
+
+- **Implement Bedrock Story Service:** Integrate Amazon Bedrock Runtime API into .NET 8 Lambda backend to generate dynamic adventure scenarios.
+- **Enforce Output Steering Rules:** Apply system prompt constraints to force AI responses into structured JSON schemas for C# DTO parsing.
+- **Build Async API Gateway Handlers:** Utilize async/await patterns in Unity `ApiClient` to handle AI response streaming without blocking UI frame rates.
+- **Handle Timeout Fallbacks:** Implement fallback story nodes and 5-second timeout buffers to handle AI service latency gracefully.
+- **Adopt Modular Code Generation:** Use IDE Steering Rules to standardize code formatting and architectural patterns across the Monorepo C# codebase.
+
+---
+
+### Event Experience
+
+Attending the **FCAJ - Agentic AI Build Week & Agent Forge** was an extraordinary learning experience that provided deep technical insights into production-grade AI Agent development on AWS Cloud.
+
+- **High-Quality L300 Technical Depth:** Nghia Nguyen's breakdown of Bedrock Agent Core, Firecracker MicroVMs, and WAT security solved critical doubts regarding enterprise AI safety.
+- **Hands-on Vibe Coding Practice:** Hai Anh's live demonstration of Kiro IDE and `agentcore CLI` showcased how fast developers can build and deploy Serverless AI Agents.
+- **Direct Relevance to Project:** Understanding AI story prompt formatting and Bedrock API integration directly shaped the architecture of my **AI Dungeon RPG** project.
+- **Inspiring Developer Community:** Engaging with Cloud Architects, AI Engineers, and fellow bootcamp students reinforced my passion for Cloud-native AI innovation.
+
+#### Some event photos
 
 ![FCAJ Agentic AI Build Week](hinh-anh-sk-3/event3.png)
 
-> **Conclusion:**
-> The event vividly portrayed the power of Agentic AI in the hands of passionate young engineers. This was not only a place to show off skills but also a massive energy-recharging station, urging me to constantly experiment, build, and dive deeper into the era of AI Native Apps!
+
+> The FCAJ Agentic AI Build Week event was a landmark learning milestone during my internship, equipping me with the production-ready mindset and technical tools to build robust, secure, and scalable AI Agent applications on AWS Cloud.
