@@ -6,61 +6,98 @@ chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# Event Report: "AWS FCAJ Agent Forge & Agentic AI Build Week"
+# Detailed Summary Report: "AWS FCAJ Agent Forge & Agentic AI Build Week"
 
-### Event Overview
+### 1. General Event Overview & Speakers
 
-On **August 1, 2026**, I attended the **AWS FCAJ Agent Forge - Deepdive** community event hosted by AWS Study Group at Bitexco Financial Tower (26th Floor). The event focused on advanced **L300-level Agentic AI architecture**, moving Generative AI applications from Proof-of-Concept (PoC) prototypes to production-ready Cloud deployments on AWS.
-
-The session brought together experienced Cloud Architects, AI Engineers, and enthusiastic developers to unpack four major enterprise challenges: **Performance, Scalability, Security, and Governance**.
-
----
-
-### Key Technical Insights
-
-#### 1. Agentic AI & The Spectrum of Autonomy
-* **Beyond Standard LLMs:** Unlike simple token prediction models, Agentic AI introduces autonomous reasoning, multi-step planning, and tool execution (`Reasoning → Planning → Execution`).
-* **Autonomy Levels:** Ranging from simple prompt-response assistants to fully autonomous multi-agent systems executing long-running background jobs.
-
-#### 2. Core 5-Layer Agent Architecture
-* **Brain (LLM Reasoning):** Leveraging Anthropic Claude (Sonnet/Haiku) and Amazon Nova models for logic and coding tasks.
-* **System Prompt & Role Rules:** Defining agent boundaries, behavioral limits, and response style.
-* **Knowledge & Context:** Connecting enterprise data via Vector DBs and RAG pipelines.
-* **Action Tools:** Connecting agents to external APIs (Webhooks, Database queries, Gmail API).
-* **Memory & Observability:** Tracking session history (short-term & long-term memory) and monitoring telemetry via Amazon CloudWatch.
-
-#### 3. Modern AI Protocols (MCP & A2A)
-* **Model Context Protocol (MCP):** Standardizing how AI agents interact with external tools and plugins.
-* **Agent-to-Agent (A2A) Protocol:** Enabling autonomous communication and task delegation between specialized agents.
-* **AWS Strands SDK & Factory Pattern:** Utilizing open-source SDKs and Factory design patterns to instantiate agents cleanly (`Model + System Prompt + Tools`).
-
-#### 4. Amazon Bedrock Agent Core Infrastructure
-* **Firecracker MicroVM Isolation:** Running user agent sessions in hardware-isolated microVMs to guarantee zero data leakage between tenants.
-* **Identity & Security (WAT):** Utilizing **Workload Access Tokens (WAT)** to exchange credentials securely without exposing user JWTs to external tools.
-* **Enterprise Gateway & Human-in-the-Loop (HITL):** Implementing middleware rules for administrative approval on high-risk agent decisions.
-
-#### 5. Hands-on Vibe Coding & AgentCore CLI
-* **Kiro IDE Steering Rules:** Setting up `.kiro/steering.md` guidelines to direct AI assistants to generate clean, AWS-compliant C# and Python code.
-* **3-Step Deployment via `agentcore CLI`:**
-  1. `agentcore init my-agent` — Scaffold project structure.
-  2. `agentcore configure` — Link LLM model and System Prompts.
-  3. `agentcore deploy` — Instantly host serverless agent runtime on AWS.
+* **Event Name:** AWS FCAJ Agent Forge - Deepdive & Agentic AI Build Week
+* **Date & Time:** 09:00 AM – 12:30 PM, August 1, 2026
+* **Location:** 26th Floor, Bitexco Financial Tower, 02 Hai Trieu Street, Ben Nghe Ward, District 1, Ho Chi Minh City
+* **Target Audience:** AI Engineers, Cloud Architects, Developers, and AWS Tech Enthusiasts
+* **Organizers (Host):** AWS Study Group & First Cloud AI Journey (FCAJ)
+* **Distinguished Speakers:**
+  * **Nghia Nguyen** – Principal Speaker (Covering Enterprise Agentic AI Architecture & L300 Theory)
+  * **Hai Anh** – Hands-on Speaker (Leading Live Vibe Coding with Kiro IDE & AgentCore CLI)
 
 ---
 
-### Personal Takeaways & Application to My Project
+### 2. Event Purpose & Objectives
 
-Participating in this event provided immense value for my internship project (**AI Dungeon RPG Adventure Game**):
+The primary mission of **AWS FCAJ Agent Forge - Deepdive** was to transition Generative AI solutions from initial Proof-of-Concept (PoC) experiments to production-ready enterprise deployments on AWS Cloud. 
 
-* **AI Story Generation Integration:** Applied the concept of prompt context and Bedrock Runtime API to generate dynamic RPG adventure branches for the game backend.
-* **Structured Choice Parsing:** Learned how to enforce strict JSON schemas on AI responses to cleanly parse story options into C# DTOs.
-* **Production-Ready Security Mindset:** Understood how to protect credentials and manage API timeouts gracefully when calling AI model endpoints.
+The event dissected the **four critical pillars** of enterprise AI adoption:
+1. **Performance:** Minimizing latency and enabling real-time streaming responses.
+2. **Scalability:** Managing multi-agent workloads with serverless architecture.
+3. **Security:** Guaranteeing strict multi-tenant data isolation and token privacy.
+4. **Governance:** Enforcing policy compliance with Human-in-the-Loop (HITL) gateways.
 
-#### Event Gallery
+---
 
-![AWS FCAJ Agent Forge Event](hinh-anh-sk-3/IMG_20260801_091335.webp)
-![Hands-on Coding Session](hinh-anh-sk-3/IMG_20260801_102453.webp)
-![AWS Community Networking](hinh-anh-sk-3/IMG_20260801_110623.webp)
+### 3. Detailed Technical Content & Core Takeaways
 
-> **Summary:**
-> The Agent Forge Deepdive event equipped me with a production-grade mindset for building Agentic AI systems. It was an inspiring milestone that directly influenced how I design serverless AI features for my internship project!
+#### A. Agentic AI Philosophy & The Spectrum of Autonomy
+Unlike traditional Large Language Models (LLMs) that function primarily as token predictors or simple conversational chatbots, **Agentic AI** represents a paradigm shift toward autonomous software entities. An Agent operates through an iterative loop:
+
+$$\text{Reasoning} \longrightarrow \text{Planning} \longrightarrow \text{Execution}$$
+
+The event categorized AI autonomy into a 4-level spectrum:
+* **Level 1 (Simple Assistant):** Single-prompt Q&A interfaces relying on raw LLM completion.
+* **Level 2 (Deterministic Workflow):** Hardcoded developer workflows where LLMs perform structured extraction.
+* **Level 3 (Human-in-the-Loop Workflow):** Autonomous agent planning with mandatory human approval gates for critical actions.
+* **Level 4 (Fully Autonomous Multi-Agent Systems):** Specialized agents autonomously collaborating, delegating long-running background tasks, and synthesizing multi-modal results.
+
+#### B. The 5 Core Production Architecture Layers of an AI Agent
+To build a resilient AI Agent on AWS, the architecture must decouple five essential components:
+
+1. **Brain (Reasoning Engine):** Large Language Models acting as the central cognitive unit. Common choices include **Anthropic Claude 3.5 Sonnet** (for complex logic and coding), **Claude 3 Haiku** (for rapid, cost-effective responses), and **Amazon Nova**.
+2. **System Prompt & Steering Rules:** Defining identity, persona, domain limits, and strict output schemas.
+3. **Knowledge Base / Context Layer:** Enterprise internal knowledge connected via Retrieval-Augmented Generation (RAG) and Vector Databases (e.g., OpenSearch Serverless).
+4. **Tools & Action Invocation Layer:** Exposing external execution capabilities (executing SQL queries, calling REST Webhooks, sending emails via Gmail API).
+5. **Memory & Observability Layer:** Maintaining session state across short-term and long-term memory while logging execution telemetry to **Amazon CloudWatch**.
+
+#### C. Next-Generation AI Protocols & Frameworks
+* **Model Context Protocol (MCP):** A open standard protocol replacing traditional REST APIs for agent-to-tool communication, making plugin integration seamless across different LLMs.
+* **Agent-to-Agent (A2A) Protocol:** Standardizing inter-agent communication, allowing a Master Agent to delegate specialized sub-tasks to Worker Agents.
+* **AWS Strands SDK & Factory Pattern:** Utilizing AWS's open-source Strands SDK alongside the **Factory Design Pattern** to instantiate agents cleanly by encapsulating:
+
+$$\text{Agent} = \text{Model} + \text{System Prompt} + \text{Tools}$$
+
+#### D. Amazon Bedrock Agent Core & Enterprise Security Topology
+* **Firecracker MicroVM Isolation:** Amazon Bedrock Agent Core executes each user session inside a dedicated **Firecracker MicroVM**. This provides absolute hardware, memory, and filesystem isolation between user sessions, ensuring zero cross-tenant data leakage.
+* **5-Step Security Flow with Workload Access Token (WAT):**
+  1. *Inbound Request:* Client submits request with a JWT or AWS Cognito Credential.
+  2. *Token Exchange:* Agent Core exchanges the user JWT for a scoped **Workload Access Token (WAT)**.
+  3. *Outbound Delegation:* WAT is converted into tool-specific credentials (OAuth/API Key) stored in an encrypted Token Vault.
+  4. *Execution:* Tools execute without ever exposing the user's primary credentials.
+  5. *Safe Response:* Filtered response is returned securely to the client.
+* **Enterprise Gateway & Human-in-the-Loop (HITL):** Acts as a middleware proxy. For example, financial refund requests under \$100 are automatically executed by the Agent, whereas requests over \$100 trigger an administrative approval workflow before execution.
+* **PII Interceptors:** Gateway filters automatically redact Personally Identifiable Information (PII) from both incoming prompts and outgoing LLM completions.
+
+#### E. Hands-on Vibe Coding Lab with Kiro IDE & `agentcore CLI`
+* **Kiro IDE & Steering Rules:** Configured `.kiro/steering.md` rules to instruct the AI assistant inside Kiro IDE to generate C# and Python code following AWS Strands SDK best practices.
+* **3-Command Deployment Workflow:**
+  1. `agentcore init my-first-agent` — Automatically scaffolds project structure (`agent.py`, `config.yaml`, `requirements.txt`).
+  2. `agentcore configure --model anthropic.claude-3-5-sonnet` — Links the LLM brain and system persona.
+  3. `agentcore deploy --env dev` — Packages and deploys the agent onto Amazon Bedrock Agent Core Firecracker MicroVMs in seconds.
+
+---
+
+### 4. Direct Application to My Internship Project (AI Dungeon RPG)
+
+Participating in **FCAJ Agent Forge** directly impacted the architectural design of my internship project, the **AI Dungeon RPG Adventure Game**:
+
+1. **Serverless AI Backend Integration:** Applied Amazon Bedrock Runtime API calls inside the .NET 8 AWS Lambda backend (`/story/next` endpoint) to dynamically generate story choices based on player character state.
+2. **Structured JSON Output Constraints:** Utilized system prompt steering techniques learned at the event to enforce strict JSON schemas on Claude LLM responses, allowing seamless deserialization into C# `StoryNodeResponse` DTOs.
+3. **Resilience & Fallback Handling:** Implemented timeout protection (5-second fallback buffer) and error interceptors to handle AI service latency without breaking the Unity UI game loop.
+
+---
+
+### 5. Event Gallery
+
+![AWS FCAJ Agent Forge Event Session](hinh-anh-sk-3/event3.png)
+
+---
+
+### 6. Final Conclusion & Reflections
+
+The **AWS FCAJ Agent Forge - Deepdive** event was a landmark learning milestone during my internship. It provided a complete blueprint for moving Generative AI from simple prompt demos to robust, secure, and production-ready Cloud architectures. The technical knowledge and hands-on experience gained from this event significantly elevated the quality and reliability of my **AI Dungeon RPG** project implementation!
