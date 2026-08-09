@@ -1,132 +1,64 @@
 ---
-title: "AWS FCAJ Agent Forge - Deepdive"
-date: 2026-08-01
+title: "FCAJ - Agentic AI Build Week"
+date: 2026-07-25
 weight: 3
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# Bài thu hoạch: "AWS FCAJ Agent Forge - Deepdive"
+# Báo cáo tổng kết: "FCAJ - Agentic AI Build Week"
 
-### Mục Đích Của Sự Kiện
+### Tinh thần của sự kiện
 
-- Trang bị kiến thức chuyên sâu cấp độ **L300 (Advanced Level)** giúp Kỹ sư AI, Cloud Architect và Developer chuyển đổi các ứng dụng Generative AI từ dạng thử nghiệm (Proof of Concept - PoC) lên môi trường triển khai thực tế (Production-ready).
-- Giải quyết 4 rào cản cốt lõi khi đưa AI Agent vào doanh nghiệp: **Performance** (Hiệu năng), **Scalability** (Khả năng mở rộng), **Security** (Bảo mật) và **Governance** (Quản trị).
-- Đi sâu vào kiến trúc Agentic AI, hệ sinh thái Amazon Bedrock Agent Core (Runtime, Identity, Gateway) và các giao thức kết nối hiện đại (MCP, A2A).
-- Hướng dẫn thực hành phương pháp **Vibe Coding** với **Kiro IDE**, cấu hình Steering Rules và khởi tạo/triển khai con Agent đầu tiên trên môi trường Serverless của AWS chỉ với 3 dòng lệnh `agentcore CLI`.
+Không chỉ dừng lại ở một buổi chia sẻ thông thường, **FCAJ - Agentic AI Build Week** thực sự là một ngày hội Community Day bùng nổ dành cho các chiến binh bước ra từ đấu trường AABW Hackathon.
 
-### Danh Sách Diễn Giả
-
-- **Anh Nghĩa** – Speaker (Phụ trách phần Lý thuyết & Kiến trúc)
-- **Hải Anh** – Speaker (Phụ trách phần Thực hành Hands-on Lab)
-- **AWS Study Group** – Đơn vị tổ chức (Host)
+Đây là nơi giao thoa của những ý tưởng táo bạo, nơi các tài năng công nghệ trẻ mổ xẻ những thách thức, kể lại hành trình "đua với thời gian" và trình diễn những dự án AI đột phá. Hơn cả một cuộc thi, sự kiện đã chứng minh rằng AI đang bước ra khỏi phòng thí nghiệm để giải quyết những bài toán doanh nghiệp hóc chuẩn nhất.
 
 ---
 
-### Nội Dung Nổi Bật
+### Sân đỗ của những dự án đột phá
 
-#### 1. Triết lý Agentic AI & Dải Mức độ Tự chủ (Spectrum of Autonomy)
-- **Khái niệm Agentic AI:** Khác với mô hình LLM thông thường chỉ dự đoán token tiếp theo, Agentic AI là lớp phần mềm thông minh có tính tự chủ (Autonomous), có khả năng thực hiện chuỗi quy trình: **Lập luận (Reasoning) → Lập kế hoạch (Planning) → Thực thi (Execute)** các tác vụ phức tạp theo nhiều bước.
-- **Dải mức độ tự chủ (Spectrum of Autonomy):**
-  - *Simple Assistant:* Mô hình hỏi - đáp cơ bản dựa trên LLM.
-  - *Deterministic Workflow:* Luồng công việc cố định do lập trình viên định nghĩa, luôn có sự can thiệp và kiểm soát của con người (Human-in-the-loop).
-  - *Fully Autonomous Multi-Agent Systems:* Hệ thống các Agent tự liên kết, phân chia nhiệm vụ, tự xử lý các tác vụ tính toán ngầm kéo dài (Long-running background jobs) và tổng hợp kết quả trả về cho người dùng.
+Sự kiện trở nên nóng hơn bao giờ hết với màn trình diễn ấn tượng từ 5 đội thi xuất sắc:
 
-#### 2. Cấu trúc Nền tảng của một AI Agent (Basic Agent Architecture)
-- **5 Thành phần cốt lõi của Agent trên Production:**
-  - **Brain (Bộ não):** Các Large Language Model (LLM) đóng vai trò lập luận. Phổ biến như Anthropic Claude (Haiku tối ưu tốc độ/chi phí, Sonnet cho tác vụ phức tạp, Opus cho lập trình nâng cao), Amazon Nova, hoặc Google Gemini.
-  - **System Prompt & Role:** Định hình nhân dạng, nhiệm vụ và thiết lập các giới hạn hành vi cho Agent.
-  - **Knowledge Base / Context:** Dữ liệu nội bộ doanh nghiệp kết nối qua RAG, Vector Database hoặc hệ thống File.
-  - **Tools / Actions:** Khả năng giao tiếp với thế giới bên ngoài (gửi mail qua Gmail API, truy vấn CSDL, gọi Webhook).
-  - **Memory & Observability:** Lưu trữ ngữ cảnh phiên làm việc (Short-term/Long-term Memory) và giám sát trạng thái hoạt động thực tế trên CloudWatch.
+#### 1. Đội "One team" - Tiên phong tự động hóa F&B
+* **Thành viên:** Anh Duy, Trần Đông, Doãn Trung, Minh Việt, Anshul Roy
+* **Điểm sáng dự án:** Đội thi đã biến một ý tưởng tưởng chừng quen thuộc thành một giải pháp vô cùng mượt mà: **Chatbot AI đặt món cho chuỗi thức ăn nhanh (như KFC)**.
+* **Giá trị cốt lõi:** Không bắt người dùng tải thêm ứng dụng, chatbot này tích hợp trực tiếp vào các nền tảng nhắn tin phổ biến như Zalo và WhatsApp. Hệ thống phân tích ngôn ngữ tự nhiên, giao tiếp như một nhân viên thực thụ và tự động hóa hoàn toàn quy trình nhận đơn, mở ra chuẩn mực mới cho dịch vụ F&B.
 
-#### 3. Giao thức Kết nối Mới & Framework Phát triển
-- **Sự chuyển dịch Giao thức (Protocols):**
-  - Chuyển từ HTTP REST API truyền thống sang 2 giao thức tiêu chuẩn mới dành riêng cho kỷ nguyên AI Agent:
-    - **MCP (Model Context Protocol):** Giao thức chuẩn hóa giúp Agent giao tiếp và gọi các Tool/Plugin bên ngoài.
-    - **A2A (Agent-to-Agent):** Giao thức cho phép các Agent trao đổi dữ liệu và phối hợp phân chia công việc trực tiếp với nhau.
-- **Framework AWS Strands SDK:** Bộ Open-source SDK do AWS phát triển dành riêng cho việc xây dựng Agent trên AWS Cloud, tối ưu hóa hiệu năng vượt trội so với LangChain hay LangGraph khi chạy trên hạ tầng AWS.
-- **Design Pattern:** Sử dụng **Factory Design Pattern** để khởi tạo Agent nhanh chóng bằng cách đóng gói 3 yếu tố: `Model + System Prompt + Tools`.
+#### 2. Đội "Signal Scout" - Radar rủi ro chiến lược
+* **Thành viên:** Lê Tấn Lực, Đỗ Hoàng Hiếu, Triệu Quốc Hào, Nguyễn Văn Duy Khiêm, Nguyễn Công Minh, Nguyễn Trần Minh Quân
+* **Điểm sáng dự án:** Biến mô hình *Value Creation & Delivery Canvas* thành một nền tảng tình báo doanh nghiệp sắc bén.
+* **Giá trị cốt lõi:** Hệ thống thu thập các tín hiệu tái cấu trúc và kết nối các mảnh ghép dữ liệu phân tán thành một bức tranh chiến lược rõ ràng. Bằng cách kết hợp sức mạnh của **AWS, LangFuse, TinyFish và Apify**, dự án giúp các nhà quản trị rủi ro phát hiện sớm các biến động và đưa ra quyết định (Duy trì, Thích ứng hoặc Bứt phá) dựa trên bằng chứng dữ liệu xác thực.
 
-#### 4. Amazon Bedrock Agent Core - Runtime Environment
-- **Serverless Managed Runtime:** Môi trường Managed Serverless giúp triển khai và vận hành Agent an toàn, dễ mở rộng theo mô hình Pay-as-you-go.
-- **Công nghệ cách ly Firecracker MicroVM:**
-  - Mỗi phiên làm việc (User Session) của Agent chạy trên một MicroVM hoàn toàn độc lập.
-  - Tách biệt tuyệt đối về phần cứng (Compute), bộ nhớ (Memory) và hệ thống tệp (File System), đảm bảo không xảy ra rò rỉ dữ liệu giữa các người dùng (User Data Isolation).
-- **Phương thức Deploy:** Đóng gói linh hoạt qua Mã nguồn Strands Template, Docker Container Image trên Amazon ECR, hoặc file ZIP nén trên Amazon S3.
-- **Tính năng quản lý Endpoint & Strategy:**
-  - Thiết lập Endpoint ARN đi kèm quản lý Alias (`default`, `prod`, `v1`, `v2`).
-  - Hỗ trợ triển khai **Canary Rollout** (chuyển dần 5% - 10% traffic sang bản mới) và **Rollback** tức thì khi gặp lỗi.
-- **Async Jobs & Bidirectional Streaming:**
-  - *Async & Long-running Jobs:* Phân tách các tác vụ tìm kiếm/phân tích phức tạp cho các Agent ngầm xử lý ở Background.
-  - *Bidirectional Streaming:* Hỗ trợ truyền dữ liệu luồng 2 chiều real-time cho các ứng dụng Đa thức (Multi-modal) bao gồm cả Voice/Audio và Text (như Voice Mode hoặc Google Live API).
+#### 3. Đội "Plan V" - Trợ lý tối thượng cho Cloud Architect
+* **Thành viên:** Phạm Tiến Thuận Phát, Huỳnh Hoàng Long, Lê Minh Nghĩa, Trần Đại Vĩ, Nguyễn An
+* **Điểm sáng dự án:** Tạo ra ứng dụng *Solution Architect Professional AI Native App* – cánh tay phải đắc lực cho mọi kỹ sư hệ thống.
+* **Giá trị cốt lõi:** Ứng dụng AI này có khả năng "đọc" yêu cầu dự án bằng ngôn ngữ tự nhiên, tự động phác thảo kiến trúc Hybrid-cloud chuẩn chỉnh. Tuyệt vời hơn, ứng dụng có thể tạo sơ đồ kiến trúc chỉnh sửa được trên **Draw.io** (với đầy đủ icon AWS chính thức), ước tính chi phí chính xác cho Region `ap-southeast-1` và liên tục tối ưu thông qua các phiên chat chuyên sâu.
 
-#### 5. Lớp Bảo mật & Định danh (Identity Layer)
-- **Quản trị Authentication & Authorization Inbound & Outbound:**
-  - **Luồng bảo mật 5 bước:**
-    1. *Inbound:* Client gửi yêu cầu kèm JWT Token hoặc AWS Cognito Credential.
-    2. *Token Exchange:* Agent Core chuyển đổi JWT thành **WAT (Workload Access Token)** - kết hợp quyền hạn của User và Agent để không làm lộ JWT gốc của User.
-    3. *Outbound Exchange:* Chuyển đổi WAT sang Credential tương ứng của Tool (OAuth Token, API Key).
-    4. *Token Vault:* Lưu trữ các Token trong kho khóa mã hóa an toàn.
-    5. *Execution:* Trả kết quả an toàn về cho người dùng.
-  - **Hỗ trợ đa dạng chuẩn:** Basic Login, OAuth 2-legged, OAuth 3-legged (SSO) và tích hợp sẵn AWS Cognito.
+#### 4. Đội "3KA" - Kỳ tích 24 giờ định hình an ninh đám đông
+* **Thành viên:** Huỳnh An Khương, Nguyễn Quốc Huy, Ngô Quang Khôi, Hoàng Lê Thanh Đức, Đặng Nguyễn Phước Lộc, Đặng Trường Hùng
+* **Điểm sáng dự án:** Hệ thống giám sát và quản lý đám đông thông minh được lập trình với tốc độ "ánh sáng" chỉ trong 24 giờ.
+* **Giá trị cốt lõi:** Hệ thống đóng vai trò như một "mắt thần" có khả năng theo dõi dòng người, đo lường mật độ và ước tính tình trạng xếp hàng theo thời gian thực. Từ đó, hệ thống chủ động phát tín hiệu cảnh báo quá tải và đưa ra khuyến nghị hành động tức thì cho lực lượng an ninh để phòng tránh ùn tắc.
 
-#### 6. Cổng Kết Nối Doanh Nghiệp (Gateway Layer)
-- **Lớp Middleware trung gian:** Giải quyết bài toán quản trị khi mở rộng lên hàng trăm Agent kết nối với hàng nghìn Tool/MCP Server.
-- **Các tính năng nổi bật:**
-  - **Human-in-the-Loop (HITL):** Cho phép Quản trị viên phê duyệt (Approve) hoặc từ chối (Deny) các hành động vượt ngưỡng Policy (ví dụ: yêu cầu hoàn tiền ≤ 100$ tự động xử lý, >100$ phải chuyển Admin duyệt).
-  - **Semantic Tool Search:** Tự động tìm kiếm và định tuyến Agent đến đúng Tool dựa trên Vector Indexing mà không cần Hard-code API.
-  - **Interceptors / Hooks:** Bộ lọc an toàn tự động loại bỏ thông tin nhạy cảm và dữ liệu định danh cá nhân (PII) ở cả 2 chiều Inbound/Outbound.
-  - **Diverse Targets & Enterprise Topology:** Hỗ trợ Lambda, REST API, API Gateway, MCP Server Target; kết nối hệ thống On-Premises qua AWS PrivateLink và NAT Gateway.
-
-#### 7. Thực Hành Hands-on Labs: Build & Deploy AI Agents
-- **Lab 1: Kiro and Its Features**
-  - **Setup môi trường:** Lựa chọn cài đặt *Local Kiro IDE* (cấu hình `aws configure` region `ap-southeast-1`) hoặc sử dụng *AWS Hosted Remote Desktop (Amazon DCV)* có sẵn toàn bộ công cụ Kiro, Python, AWS CLI, AgentCore CLI.
-  - **Cấu hình Kiro Steering:** Thiết lập file quy tắc `.kiro/steering.md` để định hướng AI trong Kiro tuân thủ chuẩn AWS Strands SDK, quy tắc đặt tên biến và xử lý ngoại lệ. Kiểm thử sinh code tự động qua **Vibe Coding**.
-- **Lab 2: Build & Deploy AI Agents với AgentCore CLI (3 Lệnh chính)**
-  - *Bước 1 (Khởi tạo dự án):* `agentcore init my-first-agent` → Tự động sinh cấu trúc thư mục chuẩn gồm `agent.py`, `config.yaml`, `requirements.txt`.
-  - *Bước 2 (Cấu hình Runtime):* `agentcore configure --model anthropic.claude-3-5-sonnet --prompt "You are a helpful AWS assistant."` → Liên kết bộ não LLM và System Prompt.
-  - *Bước 3 (Triển khai & Invoke):* `agentcore deploy --env dev` → Đóng gói lên Bedrock AgentCore Runtime (MicroVM) và chạy `agentcore invoke --prompt "..."` để nhận luồng kết quả Streaming Response real-time.
+#### 5. Đội 5 - Định nghĩa lại luồng thanh toán điện tử
+* **Điểm sáng dự án:** Đội mang đến giải pháp thông minh nhằm tối ưu hóa luồng giao dịch thanh toán.
+* **Giá trị cốt lõi:** Bằng cách tích hợp AI vào quy trình đối soát và xử lý giao dịch, dự án hướng tới loại bỏ mọi rào cản ma sát, mang lại trải nghiệm thanh toán không chỉ liền mạch, mượt mà mà còn đáp ứng các tiêu chuẩn an toàn tuyệt đối.
 
 ---
 
-### Những Gì Học Được
+### Trải nghiệm & Bài học cốt lõi
 
-#### Tư duy thiết kế
-- **Chuyển đổi từ PoC sang Production:** Nắm vững 4 trụ cột quan trọng (Performance, Scalability, Security, Governance) khi xây dựng các ứng dụng GenAI thực tế.
-- **Cách ly dữ liệu người dùng:** Áp dụng công nghệ Firecracker MicroVM để tạo môi trường tính toán riêng biệt tuyệt đối cho từng phiên làm việc.
-- **Bảo mật phân quyền WAT:** Sử dụng Workload Access Token (WAT) để bảo mật thông tin định danh của người dùng khi ủy quyền cho Agent gọi dịch vụ bên ngoài.
+Tham gia **FCAJ - Agentic AI Build Week** như một cú hích lớn đối tư duy làm sản phẩm của tôi.
 
-#### Kiến trúc kỹ thuật
-- **Chuẩn hóa Giao thức AI:** Hiểu rõ tầm quan trọng của MCP và A2A trong việc kết nối các công cụ và các Agent đa nhiệm.
-- **Kiến trúc Bedrock Agent Core:** Làm chủ 3 thành phần cốt lõi: **Runtime** (Serverless microVM), **Identity** (Xác thực & Ủy quyền), và **Gateway** (Middleware & HITL).
-- **Lập trình theo phương pháp Vibe Coding:** Tận dụng Kiro IDE và Steering Rules để định hướng AI trợ lý viết code chuẩn kiến trúc Cloud.
+* **Từ Code đến Sản phẩm:** Bài học lớn nhất không nằm ở việc ai dùng thuật toán phức tạp hơn, mà là **cách AI được cài cắm khéo léo vào thực tế**. Từ việc đặt gà rán qua Zalo đến tự động vẽ sơ đồ kiến trúc, công nghệ chỉ thực sự tỏa sáng khi nó giải quyết được "cơn đau" thực sự của người dùng.
+* **Nghệ thuật tích hợp:** Hiểu sâu sắc cách các đội thi lắp ghép các mảnh ghép API (Zalo, Drawio, Apify) thành một kiến trúc hạ tầng Cloud thống nhất, vừa đảm bảo khả năng mở rộng vừa tối ưu chi phí triệt để.
+* **Sức mạnh của áp lực (Hackathon Spirit):** Chứng kiến đội 3KA dựng xong một hệ thống AI nhận diện phức tạp trong 24h, tôi nhận ra giới hạn của bản thân hoàn toàn có thể bị phá vỡ khi làm việc với sự tập trung cao độ và tinh thần đồng đội ăn ý.
 
-#### Vận hành & Triển khai
-- **Chiến lược triển khai Canary:** Sử dụng Alias ARN trên Bedrock Agent Core để triển khai thử nghiệm 5-10% traffic và sẵn sàng Rollback khi gặp lỗi.
-- **Human-in-the-Loop:** Tích hợp cơ chế can thiệp của con người vào Cổng Gateway nhằm kiểm soát các rủi ro vận hành doanh nghiệp.
+#### Một số khoảnh khắc đáng nhớ tại sự kiện
 
----
+![FCAJ Agentic AI Build Week](hinh-anh-sk-3/IMG_20260801_091335.webp)
+![Thuyết trình các đội thi](hinh-anh-sk-3/IMG_20260801_102453.webp)
+![Không khí sự kiện](hinh-anh-sk-3/IMG_20260801_110623.webp)
 
-### Ứng Dụng Vào Công Việc
-
-- **Xây dựng Agent với AWS Strands SDK:** Áp dụng bộ khung mã nguồn mở Strands và Factory Design Pattern để thiết kế các Agent có tính đóng gói cao.
-- **Thiết lập Steering Rules cho dự án:** Tạo các file quy tắc `.kiro/steering.md` trong IDE để chuẩn hóa mã nguồn khi làm việc nhóm cùng AI.
-- **Tối ưu hóa quy trình triển khai với AgentCore CLI:** Đóng gói và đưa ứng dụng Agent lên AWS Cloud một cách nhanh chóng thông qua bộ 3 lệnh CLI (`agentcore init`, `agentcore configure`, `agentcore deploy`).
-- **Tăng cường an toàn dữ liệu:** Cấu hình Bedrock Gateway Interceptors để tự động lọc dữ liệu nhạy cảm PII và thiết lập AWS PrivateLink bảo mật kết nối nội bộ.
-
----
-
-### Trải nghiệm trong event
-
-Tham gia buổi **AWS FCAJ Agent Forge - Deepdive** đã mang lại cho tôi những trải nghiệm vô cùng quý giá và kiến thức thực tiễn vượt trội về lĩnh vực Agentic AI.
-
-- **Bài giảng L300 vô cùng cô đọng:** Anh Nghĩa đã hệ thống hóa lượng kiến thức khổng lồ (hơn 350 slide) thành các mô hình kiến trúc rất dễ tiếp thu, làm rõ lộ trình đưa AI Agent từ giai đoạn thử nghiệm lên môi trường doanh nghiệp.
-- **Trực quan với phương pháp Vibe Coding:** Phần hướng dẫn thực hành của anh Hải Anh với Kiro IDE và AgentCore CLI đã giúp tôi trải nghiệm cách khởi tạo, cấu hình và triển khai một AI Agent lên hạ tầng Serverless AWS chỉ trong vài phút.
-- **Giải tỏa rào cản bảo mật:** Sự kết hợp giữa Firecracker MicroVM, Workload Access Token (WAT) và Cổng kết nối Gateway giúp tôi hoàn toàn tự tin về tính an toàn và khả năng quản trị khi đưa AI vào hệ thống thực tế.
-
-#### Một số hình ảnh khi tham gia sự kiện
-![AWS FCAJ Agent Forge - Deepdive](hinh-anh-sk-3/IMG_20260801_091335.webp)
-![AWS FCAJ Agent Forge - Deepdive](hinh-anh-sk-3/IMG_20260801_110623.webp)
-
-> Sự kiện AWS FCAJ Agent Forge - Deepdive là một cột mốc quan trọng, giúp tôi định hình rõ nét tư duy thiết kế kiến trúc Agentic AI chuyên nghiệp, sẵn sàng làm chủ công nghệ Bedrock Agent Core và áp dụng các công cụ hiện đại để xây dựng các giải pháp Cloud-native AI vững chắc cho doanh nghiệp.
+> **Lời kết:**
+> Sự kiện đã khắc họa rõ nét sức mạnh của Agentic AI trong tay những kỹ sư trẻ đầy nhiệt huyết. Đây không chỉ là nơi trình diễn kỹ năng mà còn là một trạm sạc năng lượng khổng lồ, thúc đẩy tôi không ngừng thử nghiệm, xây dựng và dấn thân sâu hơn vào kỷ nguyên của các ứng dụng AI Native!

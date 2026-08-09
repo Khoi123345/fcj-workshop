@@ -31,9 +31,9 @@ Trong quá trình thực tập, em đã tham gia 3 events, với mỗi event là
 ---
 
 ### [Event 3](4.3-Event3/)
-&emsp;**Tên sự kiện:** AWS FCAJ Agent Forge - Deepdive
+&emsp;**Tên sự kiện:** FCAJ - Agentic AI Build Week
 
-&emsp;**Thời gian:** 09:00 ngày 01/08/2026
+&emsp;**Thời gian:** 09:00 ngày 25/07/2026
 
 &emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Bến Nghé, thành phố Hồ Chí Minh
 

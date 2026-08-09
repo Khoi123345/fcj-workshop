@@ -32,9 +32,9 @@ During my internship, I participated in three events. Each one was a memorable e
 ---
 
 ### [Event 3](4.3-Event3/)  
-&emsp;**Event Name:** AWS FCAJ Agent Forge - Deepdive
+&emsp;**Event Name:** FCAJ - Agentic AI Build Week
 
-&emsp;**Date & Time:** 09:00 August 1, 2026
+&emsp;**Date & Time:** 09:00 July 25, 2026
 
 &emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Ben Nghe Ward, Ho Chi Minh City  
 
