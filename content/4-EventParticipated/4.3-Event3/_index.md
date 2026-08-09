@@ -1,64 +1,66 @@
 ---
-title: "FCAJ - Agentic AI Build Week"
-date: 2026-07-25
+title: "FCAJ - Agentic AI Build Week & Agent Forge"
+date: 2026-08-01
 weight: 3
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# Summary Report: "FCAJ - Agentic AI Build Week"
+# Event Report: "AWS FCAJ Agent Forge & Agentic AI Build Week"
 
-### The Spirit of the Event
+### Event Overview
 
-More than just a sharing session, **FCAJ - Agentic AI Build Week** was truly a fiery Community Day dedicated to the warriors emerging from the AABW Hackathon arena. 
+On **August 1, 2026**, I attended the **AWS FCAJ Agent Forge - Deepdive** community event hosted by AWS Study Group at Bitexco Financial Tower (26th Floor). The event focused on advanced **L300-level Agentic AI architecture**, moving Generative AI applications from Proof-of-Concept (PoC) prototypes to production-ready Cloud deployments on AWS.
 
-This was an intersection of bold ideas, where young tech talents dissected challenges, recounted their "race against time" journeys, and showcased breakthrough AI projects. More than just a competition, the event proved that AI is stepping out of the lab to solve the most difficult enterprise problems.
-
----
-
-### The Stage for Breakthrough Projects
-
-The event got hotter than ever with impressive performances from 5 outstanding teams:
-
-#### 1. Team "One team" - Pioneering F&B Automation
-* **Members:** Anh Duy, Tran Dong, Doan Trung, Minh Viet, Anshul Roy
-* **Project Highlight:** The team turned a seemingly familiar idea into an incredibly seamless solution: **An AI ordering chatbot for a fast-food chain (like KFC)**.
-* **Core Value:** Without forcing users to download an extra app, this bot integrates directly into widely-used messaging platforms like Zalo and WhatsApp. It analyzes natural language, communicates like a real staff member, and completely automates the order-taking workflow, opening a new standard for F&B services.
-
-#### 2. Team "Signal Scout" - Strategic Risk Radar
-* **Members:** Le Tan Luc, Do Hoang Hieu, Trieu Quoc Hao, Nguyen Van Duy Khiem, Nguyen Cong Minh, Nguyen Tran Minh Quan
-* **Project Highlight:** Transforming the *Value Creation & Delivery Canvas* model into a sharp enterprise intelligence platform.
-* **Core Value:** The system collects restructuring signals and connects fragmented data pieces into a clear strategic picture. By combining the power of **AWS, LangFuse, TinyFish, and Apify**, the project helps risk managers detect early fluctuations and make decisions (Maintain, Adapt, or Accelerate) based on undeniable data evidence.
-
-#### 3. Team "Plan V" - The Ultimate Assistant for Cloud Architects
-* **Members:** Pham Tien Thuan Phat, Huynh Hoang Long, Le Minh Nghia, Tran Dai Vi, Nguyen An
-* **Project Highlight:** Created the *Solution Architect Professional AI Native App* – a powerful right-hand tool for any system engineer.
-* **Core Value:** This AI application can "read" project requirements in natural language, automatically drafting standard Hybrid-cloud architectures. Even more amazingly, it can generate editable architecture diagrams on **Draw.io** (with official AWS icons), accurately estimate costs for the `ap-southeast-1` Region, and continuously optimize through in-depth interactive chat sessions.
-
-#### 4. Team "3KA" - The 24-Hour Miracle Shaping Crowd Security
-* **Members:** Huynh An Khuong, Nguyen Quoc Huy, Ngo Quang Khoi, Hoang Le Thanh Duc, Dang Nguyen Phuoc Loc, Dang Truong Hung
-* **Project Highlight:** A smart crowd monitoring and management system coded at "lightning speed" in just 24 hours.
-* **Core Value:** The system acts as a "magic eye" capable of tracking human flow, measuring density, and estimating queuing conditions in real-time. From there, it proactively sends overload warning signals and provides immediate action recommendations for security teams to prevent congestion.
-
-#### 5. Team 5 - Redefining the E-payment Flow
-* **Project Highlight:** The team brought a smart solution to optimize the payment transaction flow.
-* **Core Value:** By integrating AI into the reconciliation and transaction processing workflow, the project aims to eliminate all friction barriers, delivering a payment experience that is not only seamless and smooth but also meets absolute safety standards.
+The session brought together experienced Cloud Architects, AI Engineers, and enthusiastic developers to unpack four major enterprise challenges: **Performance, Scalability, Security, and Governance**.
 
 ---
 
-### Experiences & Core Takeaways
+### Key Technical Insights
 
-Participating in **FCAJ - Agentic AI Build Week** was like a massive boost to my product-making mindset.
+#### 1. Agentic AI & The Spectrum of Autonomy
+* **Beyond Standard LLMs:** Unlike simple token prediction models, Agentic AI introduces autonomous reasoning, multi-step planning, and tool execution (`Reasoning → Planning → Execution`).
+* **Autonomy Levels:** Ranging from simple prompt-response assistants to fully autonomous multi-agent systems executing long-running background jobs.
 
-* **From Code to Product:** The biggest lesson wasn't about who used more complex algorithms, but **how cleverly AI was embedded into reality**. From ordering fried chicken via Zalo to automated architecture drawings, technology only truly shines when it solves real user "pain points".
-* **The Art of Integration:** Deeply understanding how teams pieced together API components (Zalo, Drawio, Apify) into a unified Cloud infrastructure architecture, ensuring scalability while strictly optimizing costs.
-* **The Power of Pressure (Hackathon Spirit):** Seeing how Team 3KA built a complex AI recognition system in 24 hours, I realized that our limits can absolutely be broken when working with high focus and a cohesive team.
+#### 2. Core 5-Layer Agent Architecture
+* **Brain (LLM Reasoning):** Leveraging Anthropic Claude (Sonnet/Haiku) and Amazon Nova models for logic and coding tasks.
+* **System Prompt & Role Rules:** Defining agent boundaries, behavioral limits, and response style.
+* **Knowledge & Context:** Connecting enterprise data via Vector DBs and RAG pipelines.
+* **Action Tools:** Connecting agents to external APIs (Webhooks, Database queries, Gmail API).
+* **Memory & Observability:** Tracking session history (short-term & long-term memory) and monitoring telemetry via Amazon CloudWatch.
 
-#### Memorable moments at the event
+#### 3. Modern AI Protocols (MCP & A2A)
+* **Model Context Protocol (MCP):** Standardizing how AI agents interact with external tools and plugins.
+* **Agent-to-Agent (A2A) Protocol:** Enabling autonomous communication and task delegation between specialized agents.
+* **AWS Strands SDK & Factory Pattern:** Utilizing open-source SDKs and Factory design patterns to instantiate agents cleanly (`Model + System Prompt + Tools`).
 
-![FCAJ Agentic AI Build Week](hinh-anh-sk-3/IMG_20260801_091335.webp)
-![FCAJ Agentic AI Build Week Presentations](hinh-anh-sk-3/IMG_20260801_102453.webp)
-![FCAJ Agentic AI Build Week Community](hinh-anh-sk-3/IMG_20260801_110623.webp)
+#### 4. Amazon Bedrock Agent Core Infrastructure
+* **Firecracker MicroVM Isolation:** Running user agent sessions in hardware-isolated microVMs to guarantee zero data leakage between tenants.
+* **Identity & Security (WAT):** Utilizing **Workload Access Tokens (WAT)** to exchange credentials securely without exposing user JWTs to external tools.
+* **Enterprise Gateway & Human-in-the-Loop (HITL):** Implementing middleware rules for administrative approval on high-risk agent decisions.
 
-> **Conclusion:**
-> The event vividly portrayed the power of Agentic AI in the hands of passionate young engineers. This was not only a place to show off skills but also a massive energy-recharging station, urging me to constantly experiment, build, and dive deeper into the era of AI Native Apps!
+#### 5. Hands-on Vibe Coding & AgentCore CLI
+* **Kiro IDE Steering Rules:** Setting up `.kiro/steering.md` guidelines to direct AI assistants to generate clean, AWS-compliant C# and Python code.
+* **3-Step Deployment via `agentcore CLI`:**
+  1. `agentcore init my-agent` — Scaffold project structure.
+  2. `agentcore configure` — Link LLM model and System Prompts.
+  3. `agentcore deploy` — Instantly host serverless agent runtime on AWS.
+
+---
+
+### Personal Takeaways & Application to My Project
+
+Participating in this event provided immense value for my internship project (**AI Dungeon RPG Adventure Game**):
+
+* **AI Story Generation Integration:** Applied the concept of prompt context and Bedrock Runtime API to generate dynamic RPG adventure branches for the game backend.
+* **Structured Choice Parsing:** Learned how to enforce strict JSON schemas on AI responses to cleanly parse story options into C# DTOs.
+* **Production-Ready Security Mindset:** Understood how to protect credentials and manage API timeouts gracefully when calling AI model endpoints.
+
+#### Event Gallery
+
+![AWS FCAJ Agent Forge Event](hinh-anh-sk-3/IMG_20260801_091335.webp)
+![Hands-on Coding Session](hinh-anh-sk-3/IMG_20260801_102453.webp)
+![AWS Community Networking](hinh-anh-sk-3/IMG_20260801_110623.webp)
+
+> **Summary:**
+> The Agent Forge Deepdive event equipped me with a production-grade mindset for building Agentic AI systems. It was an inspiring milestone that directly influenced how I design serverless AI features for my internship project!
