@@ -1,47 +1,78 @@
 ---
 title: "Sharing and Feedback"
-date: 2024-01-01
+date: 2026-08-01
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+### General Evaluation
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+**1. Working Environment**
+During my internship at First Cloud AI Journey (FCAJ), I found the learning environment to be friendly, supportive, and motivating. Everyone was willing to share knowledge, discuss ideas, and help each other whenever difficulties arose. The mentors encouraged us to think independently and continuously improve ourselves instead of simply providing ready-made solutions.
 
-### Overall Evaluation
+In my opinion, the program could become even more engaging by organizing additional networking or team-building activities, allowing participants to build stronger connections with mentors and fellow students.
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+**2. Support from Mentors and Organizers**
+Throughout the internship, I received continuous support from the mentors. Whenever I encountered technical challenges, they patiently guided me by suggesting approaches rather than giving direct answers, which helped me improve my problem-solving and self-learning skills.
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+The organizing team also prepared useful learning materials, workshops, and technical sessions, creating a well-structured learning environment that helped me complete the internship effectively.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**3. Relevance of the Internship to My Major**
+I believe the internship was highly relevant to my major in Information Technology, especially in the areas of Cloud Computing and Cybersecurity.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+By working on the Minecraft Server Security Platform on AWS, I was able to apply my knowledge of networking, operating systems, programming, and information security to a real-world project. At the same time, I gained hands-on experience with AWS services such as Amazon EC2, Amazon GuardDuty, AWS Lambda, Amazon SNS, and AWS Backup, which helped me better understand how cloud-based systems are designed and managed.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+**4. Learning and Skill Development Opportunities**
+One of the most valuable aspects of the program was the opportunity to learn through practical experience. Besides developing the AWS project, I also attended workshops and meetups where mentors and industry professionals shared their knowledge and experiences.
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+During the internship, I improved my technical research skills, system deployment abilities, teamwork, time management, documentation, and presentation skills. These are all essential competencies for my future career.
+
+**5. Team Culture**
+The collaborative culture was one of the highlights of the program. Team members and mentors were always willing to share knowledge and work together to solve problems.
+
+This supportive atmosphere made me feel comfortable asking questions, discussing ideas, and learning from others throughout the internship.
+
+**6. Training Program and Internship Benefits**
+The training program was well organized, combining theoretical knowledge with practical implementation.
+
+In addition to receiving guidance from experienced mentors, I had the opportunity to participate in workshops, technical meetups, access high-quality learning resources, and connect with the AWS community. These experiences were extremely valuable as I prepare for my future career.
 
 ---
 
 ### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+
+**What satisfied you the most during the internship?**
+The most satisfying part of my internship was having the opportunity to work on a real AWS project instead of only studying theoretical concepts.
+
+From researching and designing the solution to deploying and testing the system, I gained practical experience that helped me better understand how cloud technologies are applied in real environments.
+
+The workshops and meetups also broadened my understanding of Cloud Computing and helped me clarify my future career direction.
+
+**What would you like the program to improve?**
+From my perspective, the program could include more advanced hands-on AWS labs and invite more engineers from industry to share their practical experiences.
+
+It would also be beneficial to organize regular project review sessions and more networking activities between teams so participants could exchange ideas and learn from each other.
+
+**Would you recommend this program to your friends?**
+Yes.
+
+I would definitely recommend First Cloud AI Journey to my friends because it provides practical learning opportunities, real project experience, supportive mentors, and valuable connections within the AWS community.
+
+It is an excellent program for students who are interested in Cloud Computing, DevOps, AI, or Cybersecurity.
 
 ---
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+### Suggestions
+In the future, I hope the program will continue expanding its content in areas such as Cloud Security, Terraform, Kubernetes, and Infrastructure as Code.
+
+I would also like to see more hands-on workshops, larger team projects, and additional networking opportunities between mentors, industry partners, and participants.
+
+If possible, I would be very happy to continue participating in future First Cloud AI Journey programs or community activities.
+
+---
+
+### Final Comments
+I would like to sincerely thank the organizing team, mentors, and everyone involved in First Cloud AI Journey for creating such a supportive and inspiring learning environment.
+
+The knowledge, practical experience, and professional skills I gained during this internship will become a solid foundation for my future career in Game Developer.
