@@ -44,7 +44,7 @@ The backend consists of **13 AWS Lambda Functions** organized into 5 functional 
 
 3. Verify that `deploy-package.zip` is created inside `bin/Release/net8.0/`.
 
-![Dotnet Lambda Package Output](../../../../images/5-Workshop/5.3.2/5.3.2-1-dotnet-build.png)
+![Dotnet Lambda Package Output](images/5.3.2-1-dotnet-build.png)
 
 ---
 
@@ -146,19 +146,19 @@ namespace GameBackend.Handlers
 1. Log in to **AWS Management Console** and navigate to **AWS Lambda** (Ensure Region is set to `ap-southeast-1 Singapore`).
 2. Click **Functions** in the left navigation menu. You should see all 13 deployed functions listed.
 
-![AWS Lambda Functions List](../../../../images/5-Workshop/5.3.2/5.3.2-2-lambda-list.png)
+![AWS Lambda Functions List](images/5.3.2-2-lambda-list.png)
 
 3. Click on **`StoryActionFunction`** to inspect its configuration details and API Gateway triggers.
 
-![Lambda StoryActionFunction Details](../../../../images/5-Workshop/5.3.2/5.3.2-3-lambda-detail-story.png)
+![Lambda StoryActionFunction Details](images/5.3.2-3-lambda-detail-story.png)
 
 4. Scroll down to **Configuration** → **Permissions** tab to verify the IAM Execution Role policies attached for Bedrock (`bedrock:InvokeModel`).
 
-![Lambda IAM Execution Role Permissions](../../../../images/5-Workshop/5.3.2/5.3.2-4-lambda-iam-role.png)
+![Lambda IAM Execution Role Permissions](images/5.3.2-4-lambda-iam-role.png)
 
 5. Open **Amazon CloudWatch Logs** to view real-time execution logs after triggering a story request from Unity Client or Postman.
 
-![CloudWatch Logs for StoryActionFunction](../../../../images/5-Workshop/5.3.2/5.3.2-5-lambda-cloudwatch-logs.png)
+![CloudWatch Logs for StoryActionFunction](images/5.3.2-5-lambda-cloudwatch-logs.png)
 
 ---
 

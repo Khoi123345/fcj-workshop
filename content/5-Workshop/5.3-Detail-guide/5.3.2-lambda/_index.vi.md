@@ -44,7 +44,7 @@ Hệ thống Backend bao gồm **13 AWS Lambda Functions** được tổ chức 
 
 3. Kiểm tra file `deploy-package.zip` đã được tạo thành công trong đường dẫn `bin/Release/net8.0/`.
 
-![Dotnet Lambda Package Output](../../../../images/5-Workshop/5.3.2/5.3.2-1-dotnet-build.png)
+![Dotnet Lambda Package Output](images/5.3.2-1-dotnet-build.png)
 
 ---
 
@@ -146,19 +146,19 @@ namespace GameBackend.Handlers
 1. Đăng nhập vào **AWS Management Console** và mở dịch vụ **AWS Lambda** (Đảm bảo Region là `ap-southeast-1 Singapore`).
 2. Chọn **Functions** ở menu bên trái. Bạn sẽ thấy đầy đủ 13 hàm Lambda đã được triển khai.
 
-![AWS Lambda Functions List](../../../../images/5-Workshop/5.3.2/5.3.2-2-lambda-list.png)
+![AWS Lambda Functions List](images/5.3.2-2-lambda-list.png)
 
 3. Nhấp chọn hàm **`StoryActionFunction`** để xem chi tiết cấu hình và trigger API Gateway.
 
-![Lambda StoryActionFunction Details](../../../../images/5-Workshop/5.3.2/5.3.2-3-lambda-detail-story.png)
+![Lambda StoryActionFunction Details](images/5.3.2-3-lambda-detail-story.png)
 
 4. Cuộn xuống tab **Configuration** → **Permissions** để kiểm tra quyền hạn IAM Execution Role đã được gắn các policy gọi Bedrock (`bedrock:InvokeModel`).
 
-![Lambda IAM Execution Role Permissions](../../../../images/5-Workshop/5.3.2/5.3.2-4-lambda-iam-role.png)
+![Lambda IAM Execution Role Permissions](images/5.3.2-4-lambda-iam-role.png)
 
 5. Mở **Amazon CloudWatch Logs** để kiểm tra log thực thi chi tiết sau khi thực hiện gửi request cốt truyện từ Unity Client hoặc Postman.
 
-![CloudWatch Logs for StoryActionFunction](../../../../images/5-Workshop/5.3.2/5.3.2-5-lambda-cloudwatch-logs.png)
+![CloudWatch Logs for StoryActionFunction](images/5.3.2-5-lambda-cloudwatch-logs.png)
 
 ---
 
