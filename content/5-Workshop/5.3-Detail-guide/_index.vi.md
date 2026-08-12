@@ -4,7 +4,6 @@ date : 2024-01-01
 weight : 3
 chapter : false
 pre : " <b> 5.3. </b> "
-alwaysopen : true
 ---
 
 #### Hướng dẫn từng bước triển khai Hạ tầng & Backend
@@ -86,7 +85,7 @@ Backend được tách thành hai project:
 
 Sau khi triển khai xong, kết nối Unity Client tới backend AWS thực:
 
-![GameConfigSO Inspector](/images/workshop/unity_gameconfig_inspector.png)
+![GameConfigSO Inspector](../../../images/workshop/unity_gameconfig_inspector.png)
 
 1. Mở **Unity Editor** và load project (thư mục `Assets/` trong repository này).
 
