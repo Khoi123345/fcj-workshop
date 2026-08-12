@@ -8,8 +8,6 @@ pre: " <b> 5. </b> "
 
 # Building & Deploying AI Dungeon RPG Game Backend on AWS
 
-![Architecture Overview](images/aws-architect-project.jpg)
-
 #### Overview
 
 The **AI Dungeon RPG Adventure Game** is a modern 2D Unity RPG that combines Generative AI (**AWS Bedrock**) with a scalable, cost-effective Serverless architecture on AWS (**.NET 8 Lambda**, **Amazon API Gateway**, **Amazon Cognito**, **Amazon DynamoDB**).
