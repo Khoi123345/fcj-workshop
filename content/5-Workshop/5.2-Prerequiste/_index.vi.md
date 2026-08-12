@@ -1,242 +1,86 @@
 ---
-title : "Các bước chuẩn bị"
+title : "Các tiền đề cần chuẩn bị"
 date : 2024-01-01 
-weight : 2
+weight : 2 
 chapter : false
 pre : " <b> 5.2. </b> "
 ---
 
-#### IAM permissions
-Gắn IAM permission policy sau vào tài khoản aws user của bạn để triển khai và dọn dẹp tài nguyên trong workshop này.
-```
+#### Yêu cầu Môi trường
+
+Trước khi bắt đầu workshop, hãy đảm bảo bạn đã cài đặt và cấu hình các công cụ cũng như dịch vụ sau:
+
+1. **Tài khoản AWS & Quyền truy cập Bedrock:**
+   - Một tài khoản AWS đang hoạt động.
+   - Đã kích hoạt Model Access trong trang quản trị **AWS Bedrock** cho các mô hình **Anthropic Claude 3 (Haiku/Sonnet)** hoặc **Amazon Nova Micro/Lite** tại Region bạn chọn (khuyến nghị: `ap-southeast-1`).
+   - Truy cập: *AWS Console → Bedrock → Model Access → Request Access*.
+
+   ![bedrock](../../../images/workshop/bedrock.png)
+
+2. **Công cụ Phát triển:**
+   - Cài đặt [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
+   - Cài đặt [Node.js (v18+)](https://nodejs.org/) và **AWS CDK CLI**:
+     ```bash
+     npm install -g aws-cdk
+     ```
+   - Cài đặt và cấu hình [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) với IAM credentials của bạn:
+     ```bash
+     aws configure
+     # AWS Access Key ID: <your-key>
+     # AWS Secret Access Key: <your-secret>
+     # Default region name: ap-southeast-1
+     # Default output format: json
+     ```
+
+3. **Unity Client (Tùy chọn — cần thiết để kiểm thử E2E):**
+   - Cài đặt [Unity 2022.3 LTS](https://unity.com/) hoặc mới hơn (thông qua Unity Hub).
+   - Các Unity packages cần thiết (đã có sẵn trong project):
+     - **Input System** (`com.unity.inputsystem`)
+     - **TextMesh Pro** (`com.unity.textmeshpro`)
+   - Project Unity nằm trong thư mục `Assets/` — thêm thư mục gốc của repository vào Unity Hub như một project hiện có.
+
+---
+
+#### Quyền IAM cần thiết
+
+Tài khoản IAM sử dụng AWS CLI cần có quyền tối thiểu để khởi tạo tài nguyên thông qua AWS CDK:
+- `cloudformation:*`
+- `lambda:*`
+- `apigateway:*`
+- `dynamodb:*`
+- `cognito-idp:*`
+- `iam:*`
+- `bedrock:InvokeModel`
+- `s3:*` *(cho CDK bootstrap bucket và lưu trữ template cốt truyện)*
+
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
                 "cloudformation:*",
-                "cloudwatch:*",
-                "ec2:AcceptTransitGatewayPeeringAttachment",
-                "ec2:AcceptTransitGatewayVpcAttachment",
-                "ec2:AllocateAddress",
-                "ec2:AssociateAddress",
-                "ec2:AssociateIamInstanceProfile",
-                "ec2:AssociateRouteTable",
-                "ec2:AssociateSubnetCidrBlock",
-                "ec2:AssociateTransitGatewayRouteTable",
-                "ec2:AssociateVpcCidrBlock",
-                "ec2:AttachInternetGateway",
-                "ec2:AttachNetworkInterface",
-                "ec2:AttachVolume",
-                "ec2:AttachVpnGateway",
-                "ec2:AuthorizeSecurityGroupEgress",
-                "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:CreateClientVpnEndpoint",
-                "ec2:CreateClientVpnRoute",
-                "ec2:CreateCustomerGateway",
-                "ec2:CreateDhcpOptions",
-                "ec2:CreateFlowLogs",
-                "ec2:CreateInternetGateway",
-                "ec2:CreateLaunchTemplate",
-                "ec2:CreateNetworkAcl",
-                "ec2:CreateNetworkInterface",
-                "ec2:CreateNetworkInterfacePermission",
-                "ec2:CreateRoute",
-                "ec2:CreateRouteTable",
-                "ec2:CreateSecurityGroup",
-                "ec2:CreateSubnet",
-                "ec2:CreateSubnetCidrReservation",
-                "ec2:CreateTags",
-                "ec2:CreateTransitGateway",
-                "ec2:CreateTransitGatewayPeeringAttachment",
-                "ec2:CreateTransitGatewayPrefixListReference",
-                "ec2:CreateTransitGatewayRoute",
-                "ec2:CreateTransitGatewayRouteTable",
-                "ec2:CreateTransitGatewayVpcAttachment",
-                "ec2:CreateVpc",
-                "ec2:CreateVpcEndpoint",
-                "ec2:CreateVpcEndpointConnectionNotification",
-                "ec2:CreateVpcEndpointServiceConfiguration",
-                "ec2:CreateVpnConnection",
-                "ec2:CreateVpnConnectionRoute",
-                "ec2:CreateVpnGateway",
-                "ec2:DeleteCustomerGateway",
-                "ec2:DeleteFlowLogs",
-                "ec2:DeleteInternetGateway",
-                "ec2:DeleteNetworkInterface",
-                "ec2:DeleteNetworkInterfacePermission",
-                "ec2:DeleteRoute",
-                "ec2:DeleteRouteTable",
-                "ec2:DeleteSecurityGroup",
-                "ec2:DeleteSubnet",
-                "ec2:DeleteSubnetCidrReservation",
-                "ec2:DeleteTags",
-                "ec2:DeleteTransitGateway",
-                "ec2:DeleteTransitGatewayPeeringAttachment",
-                "ec2:DeleteTransitGatewayPrefixListReference",
-                "ec2:DeleteTransitGatewayRoute",
-                "ec2:DeleteTransitGatewayRouteTable",
-                "ec2:DeleteTransitGatewayVpcAttachment",
-                "ec2:DeleteVpc",
-                "ec2:DeleteVpcEndpoints",
-                "ec2:DeleteVpcEndpointServiceConfigurations",
-                "ec2:DeleteVpnConnection",
-                "ec2:DeleteVpnConnectionRoute",
-                "ec2:Describe*",
-                "ec2:DetachInternetGateway",
-                "ec2:DisassociateAddress",
-                "ec2:DisassociateRouteTable",
-                "ec2:GetLaunchTemplateData",
-                "ec2:GetTransitGatewayAttachmentPropagations",
-                "ec2:ModifyInstanceAttribute",
-                "ec2:ModifySecurityGroupRules",
-                "ec2:ModifyTransitGatewayVpcAttachment",
-                "ec2:ModifyVpcAttribute",
-                "ec2:ModifyVpcEndpoint",
-                "ec2:ReleaseAddress",
-                "ec2:ReplaceRoute",
-                "ec2:RevokeSecurityGroupEgress",
-                "ec2:RevokeSecurityGroupIngress",
-                "ec2:RunInstances",
-                "ec2:StartInstances",
-                "ec2:StopInstances",
-                "ec2:UpdateSecurityGroupRuleDescriptionsEgress",
-                "ec2:UpdateSecurityGroupRuleDescriptionsIngress",
-                "iam:AddRoleToInstanceProfile",
-                "iam:AttachRolePolicy",
-                "iam:CreateInstanceProfile",
-                "iam:CreatePolicy",
+                "lambda:*",
+                "apigateway:*",
+                "dynamodb:*",
+                "cognito-idp:*",
                 "iam:CreateRole",
-                "iam:DeleteInstanceProfile",
-                "iam:DeletePolicy",
-                "iam:DeleteRole",
-                "iam:DeleteRolePolicy",
-                "iam:DetachRolePolicy",
-                "iam:GetInstanceProfile",
-                "iam:GetPolicy",
-                "iam:GetRole",
-                "iam:GetRolePolicy",
-                "iam:ListPolicyVersions",
-                "iam:ListRoles",
+                "iam:AttachRolePolicy",
                 "iam:PassRole",
-                "iam:PutRolePolicy",
-                "iam:RemoveRoleFromInstanceProfile",
-                "lambda:CreateFunction",
-                "lambda:DeleteFunction",
-                "lambda:DeleteLayerVersion",
-                "lambda:GetFunction",
-                "lambda:GetLayerVersion",
-                "lambda:InvokeFunction",
-                "lambda:PublishLayerVersion",
-                "logs:CreateLogGroup",
-                "logs:DeleteLogGroup",
-                "logs:DescribeLogGroups",
-                "logs:PutRetentionPolicy",
-                "route53:ChangeTagsForResource",
-                "route53:CreateHealthCheck",
-                "route53:CreateHostedZone",
-                "route53:CreateTrafficPolicy",
-                "route53:DeleteHostedZone",
-                "route53:DisassociateVPCFromHostedZone",
-                "route53:GetHostedZone",
-                "route53:ListHostedZones",
-                "route53domains:ListDomains",
-                "route53domains:ListOperations",
-                "route53domains:ListTagsForDomain",
-                "route53resolver:AssociateResolverEndpointIpAddress",
-                "route53resolver:AssociateResolverRule",
-                "route53resolver:CreateResolverEndpoint",
-                "route53resolver:CreateResolverRule",
-                "route53resolver:DeleteResolverEndpoint",
-                "route53resolver:DeleteResolverRule",
-                "route53resolver:DisassociateResolverEndpointIpAddress",
-                "route53resolver:DisassociateResolverRule",
-                "route53resolver:GetResolverEndpoint",
-                "route53resolver:GetResolverRule",
-                "route53resolver:ListResolverEndpointIpAddresses",
-                "route53resolver:ListResolverEndpoints",
-                "route53resolver:ListResolverRuleAssociations",
-                "route53resolver:ListResolverRules",
-                "route53resolver:ListTagsForResource",
-                "route53resolver:UpdateResolverEndpoint",
-                "route53resolver:UpdateResolverRule",
-                "s3:AbortMultipartUpload",
-                "s3:CreateBucket",
-                "s3:DeleteBucket",
-                "s3:DeleteObject",
-                "s3:GetAccountPublicAccessBlock",
-                "s3:GetBucketAcl",
-                "s3:GetBucketOwnershipControls",
-                "s3:GetBucketPolicy",
-                "s3:GetBucketPolicyStatus",
-                "s3:GetBucketPublicAccessBlock",
-                "s3:GetObject",
-                "s3:GetObjectVersion",
-                "s3:GetBucketVersioning",
-                "s3:ListAccessPoints",
-                "s3:ListAccessPointsForObjectLambda",
-                "s3:ListAllMyBuckets",
-                "s3:ListBucket",
-                "s3:ListBucketMultipartUploads",
-                "s3:ListBucketVersions",
-                "s3:ListJobs",
-                "s3:ListMultipartUploadParts",
-                "s3:ListMultiRegionAccessPoints",
-                "s3:ListStorageLensConfigurations",
-                "s3:PutAccountPublicAccessBlock",
-                "s3:PutBucketAcl",
-                "s3:PutBucketPolicy",
-                "s3:PutBucketPublicAccessBlock",
-                "s3:PutObject",
-                "secretsmanager:CreateSecret",
-                "secretsmanager:DeleteSecret",
-                "secretsmanager:DescribeSecret",
-                "secretsmanager:GetSecretValue",
-                "secretsmanager:ListSecrets",
-                "secretsmanager:ListSecretVersionIds",
-                "secretsmanager:PutResourcePolicy",
-                "secretsmanager:TagResource",
-                "secretsmanager:UpdateSecret",
-                "sns:ListTopics",
-                "ssm:DescribeInstanceProperties",
-                "ssm:DescribeSessions",
-                "ssm:GetConnectionStatus",
-                "ssm:GetParameters",
-                "ssm:ListAssociations",
-                "ssm:ResumeSession",
-                "ssm:StartSession",
-                "ssm:TerminateSession"
+                "bedrock:InvokeModel",
+                "s3:*"
             ],
             "Resource": "*"
         }
     ]
 }
-
 ```
 
-#### Khởi tạo tài nguyên bằng CloudFormation
+---
 
-Trong lab này, chúng ta sẽ dùng N.Virginia region (us-east-1).
+#### Lưu ý quan trọng
 
-Để chuẩn bị cho môi trường làm workshop, chúng ta deploy CloudFormation template sau (click link): [PrivateLinkWorkshop ](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.us-east-1.amazonaws.com/reinvent-endpoints-builders-session/Nested.yaml&stackName=PLCloudSetup). Để nguyên các lựa chọn mặc định.
+> **Xác nhận Email Cognito**: Mặc định, AWS Cognito yêu cầu xác nhận email trước khi người dùng có thể đăng nhập. Sau khi đăng ký qua game hoặc API, bạn có thể cần xác nhận thủ công qua Cognito Console (*User Pools → Users → Confirm User*) hoặc cấu hình tự động xác nhận trong CDK stack cho mục đích kiểm thử.
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack1.png)
-
-+ Lựa chọn 2 mục acknowledgement 
-+ Chọn Create stack
-
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack2.png)
-
-Quá trình triển khai CloudFormation cần khoảng 15 phút để hoàn thành.
-
-![complete](/images/5-Workshop/5.2-Prerequisite/complete.png)
-
-+ 2 VPCs đã được tạo
-
-![vpcs](/images/5-Workshop/5.2-Prerequisite/vpcs.png)
-
-+ 3 EC2s đã được tạo
-
-![EC2](/images/5-Workshop/5.2-Prerequisite/ec2.png)
+> **Region**: Workshop này sử dụng `ap-southeast-1` (Singapore) làm region mặc định. Bạn có thể dùng `us-east-1` hoặc `us-west-2` nếu muốn, nhưng hãy đảm bảo đã kích hoạt Bedrock model access tại region đó.
