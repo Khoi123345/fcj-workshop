@@ -4,13 +4,30 @@ date : 2024-01-01
 weight : 3
 chapter : false
 pre : " <b> 5.3. </b> "
+alwaysopen : true
 ---
 
-#### Step-by-Step Infrastructure & Backend Deployment
+### Detailed Infrastructure & Backend Deployment Guide
 
-Follow these detailed steps to compile the monorepo shared libraries, build the .NET 8 Lambda functions, and deploy the entire serverless infrastructure using AWS CDK (C#).
+#### Overview
 
-> **Before you start**: The CDK stack automatically provisions AWS Cognito (User Pool + App Client) for you — no manual Console setup required. However, understanding how Cognito works in this project will help you debug auth issues and configure the Unity Client correctly. See [5.3.1 Setting Up AWS Cognito](5.3.1-cognito-setup/) for a detailed walkthrough.
+Section **5.3 Detailed Deployment Guide** provides end-to-end instructions for compiling shared assets, building C# Lambda functions, and deploying the entire serverless infrastructure for the **AI Dungeon RPG Adventure Game** using AWS CDK.
+
+The detailed guide is organized into **5 sub-modules**:
+
+| Sub-Module | Title & Focus | Key Services & Artifacts |
+|---|---|---|
+| **[5.3.1](5.3.1-cognito-setup/)** | **[Setting Up AWS Cognito](5.3.1-cognito-setup/)** | User Pool, App Client, JWT Tokens, Auth Flow |
+| **[5.3.2](5.3.2-lambda/)** | **[Building & Deploying AWS Lambda Backend (.NET 8)](5.3.2-lambda/)** | 13 C# Lambda Functions, `dotnet lambda package`, `GameLambdaStack` |
+| **[5.3.3](5.3.3-dynamodb/)** | **[Provisioning & Managing Amazon DynamoDB Database Tier](5.3.3-dynamodb/)** | 10 NoSQL Tables, C# Entity Models, `SaveAsync` Persistence, `GameDatabaseStack` |
+| **[5.3.4](5.3.4-Bedrock-guide/)** | **[AWS Bedrock & Backend Integration](5.3.4-Bedrock-guide/)** | `amazon.nova-pro-v1:0`, Model Access, Prompt Builder, DI Registration |
+| **[5.3.5](5.3.5-Deployment/)** | **[Deploy Game to Web (WebGL, S3 & CloudFront)](5.3.5-Deployment/)** | Unity WebGL Build, S3 Bucket Hosting, CloudFront CDN Distribution |
+
+---
+
+### Step-by-Step Infrastructure & Backend Deployment
+
+Follow these quick execution steps to compile the monorepo shared libraries, package the .NET 8 Lambda functions, and deploy the entire serverless infrastructure using AWS CDK (C#).
 
 ---
 
@@ -87,7 +104,7 @@ The backend is split into two projects:
 
 After deploying, connect the Unity Client to your live AWS backend:
 
-![GameConfigSO Inspector](../../../images/workshop/unity_gameconfig_inspector.png)
+![GameConfigSO Inspector](5.3.1-cognito-setup/images/unity_gameconfig_inspector.png)
 
 1. Open **Unity Editor** and load the project (the `Assets/` folder of this repository).
 

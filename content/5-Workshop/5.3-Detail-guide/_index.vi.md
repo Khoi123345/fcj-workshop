@@ -4,9 +4,28 @@ date : 2024-01-01
 weight : 3
 chapter : false
 pre : " <b> 5.3. </b> "
+alwaysopen : true
 ---
 
-#### Hướng dẫn từng bước triển khai Hạ tầng & Backend
+### Hướng dẫn Triển khai Hạ tầng & Backend Chi tiết
+
+#### Tổng quan
+
+Mục **5.3 Hướng dẫn triển khai chi tiết** cung cấp hướng dẫn toàn diện từng bước để biên dịch các thư viện dùng chung, đóng gói các hàm Lambda C# và triển khai toàn bộ hạ tầng Serverless cho tựa game **AI Dungeon RPG Adventure Game** trên đám mây AWS bằng AWS CDK.
+
+Hướng dẫn triển khai được tổ chức thành **5 mục con chuyên biệt**:
+
+| Mục Con | Tên Bài Viết & Nội Dung Trọng Tâm | Dịch Vụ AWS & Tài Nguyên Chính |
+|---|---|---|
+| **[5.3.1](5.3.1-cognito-setup/)** | **[Thiết lập AWS Cognito](5.3.1-cognito-setup/)** | User Pool, App Client, JWT Tokens, Luồng xác thực Auth |
+| **[5.3.2](5.3.2-lambda/)** | **[Triển khai Backend AWS Lambda (.NET 8)](5.3.2-lambda/)** | 13 Hàm C# Lambda, `dotnet lambda package`, `GameLambdaStack` |
+| **[5.3.3](5.3.3-dynamodb/)** | **[Khởi tạo & Quản lý Cơ sở dữ liệu Amazon DynamoDB](5.3.3-dynamodb/)** | 10 Bảng NoSQL, C# Entity Models, Lưu dữ liệu `SaveAsync`, `GameDatabaseStack` |
+| **[5.3.4](5.3.4-Bedrock-guide/)** | **[Cấu hình AWS Bedrock & Backend](5.3.4-Bedrock-guide/)** | `amazon.nova-pro-v1:0`, Quyền Model Access, Prompt Builder, DI Registration |
+| **[5.3.5](5.3.5-Deployment/)** | **[Triển khai Game WebGL lên S3 & CloudFront](5.3.5-Deployment/)** | Build WebGL từ Unity, Hosting S3 Bucket, Phân phối CloudFront CDN |
+
+---
+
+### Hướng dẫn từng bước triển khai Hạ tầng & Backend
 
 Thực hiện theo các bước chi tiết dưới đây để biên dịch thư viện dùng chung monorepo, đóng gói Lambda function .NET 8 và triển khai hạ tầng Serverless hoàn chỉnh bằng AWS CDK (C#).
 
@@ -85,7 +104,7 @@ Backend được tách thành hai project:
 
 Sau khi triển khai xong, kết nối Unity Client tới backend AWS thực:
 
-![GameConfigSO Inspector](../../../images/workshop/unity_gameconfig_inspector.png)
+![GameConfigSO Inspector](5.3.1-cognito-setup/images/unity_gameconfig_inspector.png)
 
 1. Mở **Unity Editor** và load project (thư mục `Assets/` trong repository này).
 
